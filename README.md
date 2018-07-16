@@ -1,1 +1,0 @@
-depok-single-window-android
