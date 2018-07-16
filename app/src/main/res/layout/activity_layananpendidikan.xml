@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="id.depok.depoksinglewindow.ui.layananpendidikan.LayananPendidikanActivity">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbarlayout_layananpendidikan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_layananpendidikan"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <View
+            android:id="@+id/view_layananpendidikan_schoolregister"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="@color/softRed"
+            app:layout_constraintTop_toBottomOf="@+id/appbarlayout_layananpendidikan"/>
+
+        <View
+            android:id="@+id/view_layananpendidikan_schoolregisteroverlay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintTop_toBottomOf="@+id/appbarlayout_layananpendidikan"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <ImageView
+            android:id="@+id/imageview_layananpendidikan_schoolregistericon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_school"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toStartOf="@+id/view_layananpendidikan_schoolregister"
+            app:layout_constraintTop_toTopOf="@+id/view_layananpendidikan_schoolregister"
+            app:layout_constraintBottom_toBottomOf="@+id/view_layananpendidikan_schoolregister"/>
+        <TextView
+            android:id="@+id/textview_layananpendidikan_schoolregistertitle"
+            style="@style/MenuTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            android:text="@string/layananpendidikan_schoolregister"
+            app:layout_constraintBottom_toBottomOf="@+id/view_layananpendidikan_schoolregister"
+            app:layout_constraintStart_toEndOf="@+id/imageview_layananpendidikan_schoolregistericon"
+            app:layout_constraintTop_toTopOf="@+id/view_layananpendidikan_schoolregister" />
+        <View
+            android:id="@+id/view_layananpendidikan_passinggradeinfo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="@color/brightGreen"
+            app:layout_constraintTop_toBottomOf="@+id/view_layananpendidikan_schoolregister"/>
+
+        <View
+            android:id="@+id/view_layananpendidikan_passinggradeoverlay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintTop_toBottomOf="@+id/view_layananpendidikan_schoolregister"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <ImageView
+            android:id="@+id/imageview_layananpendidikan_passinggradeicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_grade"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toStartOf="@+id/view_layananpendidikan_passinggradeinfo"
+            app:layout_constraintTop_toTopOf="@+id/view_layananpendidikan_passinggradeinfo"
+            app:layout_constraintBottom_toBottomOf="@+id/view_layananpendidikan_passinggradeinfo"/>
+
+        <TextView
+            android:id="@+id/textview_layanankesehatan_healthcareservicetitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/layananpendidikan_passinggrade"
+            style="@style/MenuTitle"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toEndOf="@+id/imageview_layananpendidikan_passinggradeicon"
+            app:layout_constraintTop_toTopOf="@+id/view_layananpendidikan_passinggradeinfo"
+            app:layout_constraintBottom_toBottomOf="@+id/view_layananpendidikan_passinggradeinfo"/>
+
+        <View
+            android:id="@+id/view_layananpendidikan_kalendersekolah"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="@color/darkGreen"
+            app:layout_constraintTop_toBottomOf="@+id/view_layananpendidikan_passinggradeinfo"/>
+
+        <View
+            android:id="@+id/view_layananpendidikan_kalendersekolahoverlay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintTop_toBottomOf="@+id/view_layananpendidikan_passinggradeinfo"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <ImageView
+            android:id="@+id/imageview_layananpendidikan_kalendersekolahicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_linewhite_info"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toStartOf="@+id/view_layananpendidikan_kalendersekolah"
+            app:layout_constraintTop_toTopOf="@+id/view_layananpendidikan_kalendersekolah"
+            app:layout_constraintBottom_toBottomOf="@+id/view_layananpendidikan_kalendersekolah"/>
+
+        <TextView
+            android:id="@+id/textview_layananpendidikan_kalendersekolahtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/layananpendidikan_schoolcalendar"
+            style="@style/MenuTitle"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toEndOf="@+id/imageview_layananpendidikan_kalendersekolahicon"
+            app:layout_constraintTop_toTopOf="@+id/view_layananpendidikan_kalendersekolah"
+            app:layout_constraintBottom_toBottomOf="@+id/view_layananpendidikan_kalendersekolah"/>
+
+
+        <View
+            android:id="@+id/view_layananpendidikan_ppdb"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="@color/orange"
+            app:layout_constraintTop_toBottomOf="@+id/view_layananpendidikan_kalendersekolah"/>
+
+        <View
+            android:id="@+id/view_layananpendidikan_ppdboverlay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintTop_toBottomOf="@+id/view_layananpendidikan_kalendersekolah"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <ImageView
+            android:id="@+id/imageview_layananpendidikan_ppdbicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_white_ppdb"
+            android:layout_marginStart="12dp"
+            app:layout_constraintStart_toStartOf="@+id/view_layananpendidikan_ppdb"
+            app:layout_constraintTop_toTopOf="@+id/view_layananpendidikan_ppdb"
+            app:layout_constraintBottom_toBottomOf="@+id/view_layananpendidikan_ppdb"/>
+
+        <TextView
+            android:id="@+id/textview_layananpendidikan_ppdbtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/layananpendidikan_ppdb"
+            style="@style/MenuTitle"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toEndOf="@+id/imageview_layananpendidikan_ppdbicon"
+            app:layout_constraintTop_toTopOf="@+id/view_layananpendidikan_ppdb"
+            app:layout_constraintBottom_toBottomOf="@+id/view_layananpendidikan_ppdb"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

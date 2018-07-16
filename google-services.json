@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "626101652818",
+    "firebase_url": "https://elite-vista-203713.firebaseio.com",
+    "project_id": "elite-vista-203713",
+    "storage_bucket": "elite-vista-203713.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:626101652818:android:b3473b962e21a05a",
+        "android_client_info": {
+          "package_name": "id.depok.depoksinglewindow"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "626101652818-6kl8f21prtqb9tkeb3lkjocgbetj7njt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB022YZqFX2-RevgwdbN1tAnCBp-ybs2Vo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

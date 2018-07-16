@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "232463655577",
+    "firebase_url": "https://depok-single-window.firebaseio.com",
+    "project_id": "depok-single-window",
+    "storage_bucket": "depok-single-window.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:232463655577:android:b3473b962e21a05a",
+        "android_client_info": {
+          "package_name": "id.depok.depoksinglewindow"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "232463655577-j8lm57d8bo5majp5m8b0c2fnc492s8tp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5LGLucd8bwZqpWlL_BAxHay9g-ZMdBwo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

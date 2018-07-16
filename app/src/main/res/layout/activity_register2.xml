@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_get_start">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textview_register_title"
+                    style="@style/PageTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="?attr/actionBarSize"
+                    android:text="@string/all_registration"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:id="@+id/textview_register_registerguide"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/register_guide"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textview_register_title"/>
+
+                <Spinner
+                    android:id="@+id/spinner_register_isdepokresidence"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="@dimen/margin_page_horizontalmargin"
+                    android:layout_marginEnd="@dimen/margin_page_horizontalmargin"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textview_register_registerguide"
+                    android:entries="@array/depok_residences"/>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/textinputlayout_register_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_page_horizontalmargin"
+                    android:layout_marginEnd="@dimen/margin_page_horizontalmargin"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/spinner_register_isdepokresidence"
+                    >
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/edittext_register_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="@string/all_address"
+                        android:inputType="textMultiLine"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <Spinner
+                    android:visibility="gone"
+                    android:id="@+id/spinner_register_province"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="@dimen/margin_page_horizontalmargin"
+                    android:layout_marginEnd="@dimen/margin_page_horizontalmargin"
+                    app:layout_constraintTop_toBottomOf="@+id/textinputlayout_register_address"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+                <Spinner
+                    android:visibility="gone"
+                    android:id="@+id/spinner_register_kabupaten"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="@dimen/margin_page_horizontalmargin"
+                    android:layout_marginEnd="@dimen/margin_page_horizontalmargin"
+                    app:layout_constraintTop_toBottomOf="@+id/spinner_register_province"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <Spinner
+                    android:id="@+id/spinner_register_kecamatan"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    tools:text="TextView"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="@dimen/margin_page_horizontalmargin"
+                    android:layout_marginEnd="@dimen/margin_page_horizontalmargin"
+                    app:layout_constraintTop_toBottomOf="@+id/spinner_register_kabupaten"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    />
+
+                <Spinner
+                    android:id="@+id/spinner_register_kelurahan"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    tools:text="TextView"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="@dimen/margin_page_horizontalmargin"
+                    android:layout_marginEnd="@dimen/margin_page_horizontalmargin"
+                    app:layout_constraintTop_toBottomOf="@+id/spinner_register_kecamatan"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/textinputlayout_register_postalcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_page_horizontalmargin"
+                    android:layout_marginEnd="@dimen/margin_page_horizontalmargin"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/spinner_register_kelurahan"
+                    app:layout_constraintBottom_toTopOf="@+id/textview_register_agreement"
+                    >
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/edittext_register_postalcode"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="@string/all_postalcode"
+                        android:inputType="numberSigned"
+                        android:lines="1"
+                        android:maxLength="5"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/textview_register_agreement"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginStart="@dimen/margin_page_horizontalmargin"
+                    android:layout_marginEnd="@dimen/margin_page_horizontalmargin"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textinputlayout_register_postalcode"
+                    app:layout_constraintBottom_toTopOf="@+id/button_register_registerbutton"
+                    android:text="@string/register_agreement"
+                    />
+
+                <Button
+                    android:id="@+id/button_register_registerbutton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/MainButton"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="30dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textview_register_agreement"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="@string/all_register"
+                    />
+
+            </android.support.constraint.ConstraintLayout>
+
+        </ScrollView>
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

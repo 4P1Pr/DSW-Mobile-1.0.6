@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="id.depok.depoksinglewindow.ui.onboarding.OnBoardingSlidePageFragment"
+        android:background="@android:color/transparent">
+
+        <ImageView
+            android:id="@+id/imageview_onboardingslidpage_pageimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="150dp"
+            android:minWidth="150dp"
+            app:layout_constraintBottom_toTopOf="@+id/textview_onboardingslidepage_titletext"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.35000002"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/textview_onboardingslidepage_titletext"
+            style="@style/OnBoardingMainTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Panggilan Darurat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageview_onboardingslidpage_pageimage"
+            app:layout_constraintBottom_toTopOf="@+id/textview_onboardingslidepage_bodytext"
+            android:layout_marginTop="1dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/textview_onboardingslidepage_bodytext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Akses mudah panggilan darurat untuk kejadian/ musibah tak terduga"
+            android:textSize="@dimen/textsize_onboarding_body"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textview_onboardingslidepage_titletext"
+            android:maxWidth="270dp"
+            android:layout_marginTop="3dp"
+            android:gravity="center"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

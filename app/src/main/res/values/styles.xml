@@ -1,0 +1,176 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="TextWithPrimaryColor" parent="AppTheme">
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="PageTitle" parent="AppTheme">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">@dimen/textsize_page_title</item>
+    </style>
+
+    <style name="OnBoardingMainTitle" parent="AppTheme">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">@dimen/textsize_onboarding_title</item>
+    </style>
+
+    <style name="LoginBigTitle" parent="TextWithPrimaryColor">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">@dimen/textsize_login_bigtitle</item>
+    </style>
+
+    <style name="LoginLittleTitle" parent="TextWithPrimaryColor">
+        <item name="android:textSize">@dimen/textsize_login_littletitle</item>
+    </style>
+
+    <style name="MenuTitle" parent="AppTheme">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/textsize_menutitle</item>
+    </style>
+
+    <style name="MenuItem" parent="AppTheme">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/textsize_menuitem</item>
+    </style>
+
+    <style name="SholatLabel" parent="AppTheme">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@color/darkGrey</item>
+        <item name="android:textSize">@dimen/textsize_home_praytimelabel</item>
+        <item name="android:paddingTop">@dimen/margin_home_praytime_topmargin</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="SholatValue" parent="AppTheme">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@color/darkGrey</item>
+        <item name="android:textSize">@dimen/textsize_home_praytimevalue</item>
+        <item name="android:paddingBottom">@dimen/margin_home_praytime_bottommargin</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="HeaderTitle" parent="AppTheme">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/textsize_header</item>
+    </style>
+
+    <style name="LabelStyle" parent="AppTheme">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">@dimen/textsize_formlabel</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="EmergencyDialogLabelStyle" parent="AppTheme">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">@dimen/textsize_formlabel</item>
+        <item name="android:paddingTop">@dimen/padding_menu_horizontalmargin</item>
+        <item name="android:layout_marginBottom">@dimen/padding_menu_horizontalmargin</item>
+        <item name="android:layout_marginStart">@dimen/padding_menu_horizontalmargin</item>
+    </style>
+
+    <style name="NumberStyle" parent="AppTheme">
+        <item name="android:textColor">@color/darkGrey</item>
+        <item name="android:textSize">@dimen/textsize_numberlabel</item>
+        <item name="android:layout_marginTop">@dimen/padding_menu_horizontalmargin</item>
+        <item name="android:layout_marginBottom">@dimen/padding_menu_horizontalmargin</item>
+        <item name="android:layout_marginStart">@dimen/padding_menu_horizontalmargin</item>
+    </style>
+
+    <style name="UserName" parent="AppTheme">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">@dimen/textsize_page_title</item>
+    </style>
+
+    <style name="MenuHeader" parent="AppTheme">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/textsize_menuitem</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="PrayDate" parent="AppTheme">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/textsize_praydate</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:padding">@dimen/padding_praydate</item>
+    </style>
+
+    <style name="ButtonLabel" parent="AppTheme">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/textsize_buttonlabel</item>
+        <item name="android:paddingTop">@dimen/padding_menu_horizontalmargin</item>
+        <item name="android:paddingBottom">@dimen/padding_menu_horizontalmargin</item>
+    </style>
+
+    <style name="ButtonLabel1" parent="AppTheme">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/textsize_buttonlabel</item>
+        <item name="android:background">@color/black10</item>
+        <item name="android:paddingTop">@dimen/padding_menu_horizontalmargin</item>
+        <item name="android:paddingBottom">@dimen/padding_menu_horizontalmargin</item>
+    </style>
+
+    <style name="HeaderSubtitle" parent="AppTheme">
+        <item name="android:textColor">@color/darkGrey</item>
+        <item name="android:textSize">@dimen/textsize_header_subtitle</item>
+    </style>
+
+    <style name="ColoredButton" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:paddingLeft">50dp</item>
+        <item name="android:paddingRight">50dp</item>
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:paddingBottom">15dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="BorderlessButton" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:paddingLeft">50dp</item>
+        <item name="android:paddingRight">50dp</item>
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:paddingBottom">15dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="MainButton" parent="ColoredButton">
+        <item name="colorButtonNormal">@color/colorPrimary</item>
+        <item name="android:textColorPrimary">#fff</item>
+    </style>
+
+    <style name="BlueButton">
+        <item name="colorButtonNormal">@color/colorPrimary</item>
+        <item name="android:textColorPrimary">#fff</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="GreyButton">
+        <item name="colorButtonNormal">@color/lightGrey</item>
+        <item name="android:textColorPrimary">#fff</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="GreenButton">
+        <item name="colorButtonNormal">@color/brightGreen</item>
+        <item name="android:textColorPrimary">#fff</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="RedButton">
+        <item name="colorButtonNormal">@color/brightRed</item>
+        <item name="android:textColorPrimary">#fff</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+</resources>

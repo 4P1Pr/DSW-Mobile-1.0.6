@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="id.depok.depoksinglewindow.ui.home.HomeActivity">
+
+        <ScrollView
+            android:id="@+id/scrollview_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            android:fadeScrollbars="false">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar_home"
+                    android:layout_width="0dp"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+                </android.support.v7.widget.Toolbar>
+
+                <ImageView
+                    android:id="@+id/imageview_home_headerlogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/logo_header"
+                    app:layout_constraintTop_toTopOf="@id/toolbar_home"
+                    app:layout_constraintBottom_toBottomOf="@id/toolbar_home"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <com.daimajia.slider.library.SliderLayout
+                    android:id="@+id/viewpager_home_imageviewpager"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintDimensionRatio="21:9"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/toolbar_home"/>
+
+                <com.daimajia.slider.library.Indicators.PagerIndicator
+                    android:id="@+id/pageindicatorview_home_pageindicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/viewpager_home_imageviewpager"
+                    app:layout_constraintStart_toStartOf="@+id/viewpager_home_imageviewpager"
+                    app:layout_constraintEnd_toEndOf="@+id/viewpager_home_imageviewpager"
+                    custom:selected_width="9dp"
+                    custom:selected_height="9dp"
+                    custom:unselected_width="9dp"
+                    custom:unselected_height="9dp"
+                    custom:unselected_color="#FF91999C"
+                    custom:selected_color="@color/colorPrimary"/>
+
+                <TextView
+                    android:id="@+id/textview_home_depokpraytimelabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    style="@style/PrayDate"
+                    android:text="@string/home_depokpraytime"
+                    android:gravity="center_vertical"
+                    android:foregroundGravity="center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/textview_home_depokpraytimevalue"
+                    app:layout_constraintTop_toTopOf="@+id/textview_home_depokpraytimevalue"
+                    app:layout_constraintBottom_toBottomOf="@+id/textview_home_depokpraytimevalue"/>
+
+                <TextView
+                    android:id="@+id/textview_home_depokpraytimevalue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    style="@style/PrayDate"
+                    tools:text="Selasa, 18 Des 2017"
+                    android:gravity="center_vertical|end"
+                    app:layout_constraintStart_toEndOf="@id/textview_home_depokpraytimelabel"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/viewpager_home_imageviewpager"/>
+
+                <TextView
+                    android:id="@+id/textview_home_subuhvalue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    tools:text="04:00"
+                    style="@style/SholatValue"
+                    app:layout_constraintTop_toBottomOf="@+id/textview_home_subuhlabel"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/textview_home_dzuhurvalue"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintBottom_toTopOf="@+id/recyclerview_home_homemenu"/>
+
+                <TextView
+                    android:id="@+id/textview_home_dzuhurvalue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    tools:text="11:40"
+                    style="@style/SholatValue"
+                    app:layout_constraintTop_toBottomOf="@+id/textview_home_dzuhurlabel"
+                    app:layout_constraintStart_toEndOf="@+id/textview_home_subuhvalue"
+                    app:layout_constraintEnd_toStartOf="@+id/textview_home_asharvalue"/>
+
+                <TextView
+                    android:id="@+id/textview_home_asharvalue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    tools:text="15:10"
+                    style="@style/SholatValue"
+                    app:layout_constraintTop_toBottomOf="@+id/textview_home_asharlabel"
+                    app:layout_constraintStart_toEndOf="@id/textview_home_dzuhurvalue"
+                    app:layout_constraintEnd_toStartOf="@+id/textview_home_maghribvalue"/>
+
+                <TextView
+                    android:id="@+id/textview_home_maghribvalue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    tools:text="17:50"
+                    style="@style/SholatValue"
+                    app:layout_constraintTop_toBottomOf="@+id/textview_home_maghriblabel"
+                    app:layout_constraintStart_toEndOf="@+id/textview_home_asharvalue"
+                    app:layout_constraintEnd_toStartOf="@+id/textview_home_isyavalue"/>
+
+                <TextView
+                    android:id="@+id/textview_home_isyavalue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    tools:text="19:10"
+                    style="@style/SholatValue"
+                    app:layout_constraintTop_toBottomOf="@+id/textview_home_isyalabel"
+                    app:layout_constraintStart_toEndOf="@+id/textview_home_maghribvalue"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <TextView
+                    android:id="@+id/textview_home_subuhlabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_subuh"
+                    style="@style/SholatLabel"
+                    app:layout_constraintTop_toBottomOf="@+id/textview_home_depokpraytimevalue"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/textview_home_dzuhurlabel"
+                    app:layout_constraintHorizontal_chainStyle="spread"/>
+
+                <TextView
+                    android:id="@+id/textview_home_dzuhurlabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_dzuhur"
+                    style="@style/SholatLabel"
+                    app:layout_constraintTop_toBottomOf="@+id/textview_home_depokpraytimevalue"
+                    app:layout_constraintStart_toEndOf="@+id/textview_home_subuhlabel"
+                    app:layout_constraintEnd_toStartOf="@+id/textview_home_asharlabel"/>
+
+                <TextView
+                    android:id="@+id/textview_home_asharlabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_ashar"
+                    style="@style/SholatLabel"
+                    app:layout_constraintTop_toBottomOf="@+id/textview_home_depokpraytimevalue"
+                    app:layout_constraintStart_toEndOf="@+id/textview_home_dzuhurlabel"
+                    app:layout_constraintEnd_toStartOf="@+id/textview_home_maghriblabel"/>
+
+                <TextView
+                    android:id="@+id/textview_home_maghriblabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_maghrib"
+                    style="@style/SholatLabel"
+                    app:layout_constraintTop_toBottomOf="@+id/textview_home_depokpraytimevalue"
+                    app:layout_constraintStart_toEndOf="@+id/textview_home_asharlabel"
+                    app:layout_constraintEnd_toStartOf="@+id/textview_home_isyalabel"/>
+
+                <TextView
+                    android:id="@+id/textview_home_isyalabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_isya"
+                    style="@style/SholatLabel"
+                    app:layout_constraintTop_toBottomOf="@+id/textview_home_depokpraytimevalue"
+                    app:layout_constraintStart_toEndOf="@+id/textview_home_maghriblabel"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerview_home_homemenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/lightGrey"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textview_home_subuhvalue"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </android.support.constraint.ConstraintLayout>
+
+        </ScrollView>
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>
+

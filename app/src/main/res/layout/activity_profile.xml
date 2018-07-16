@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="id.depok.depoksinglewindow.ui.profile.ProfileActivity">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbarlayout_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_profile"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/appbarlayout_profile"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/view_profile_headerbackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_profileheaderheight"
+                    android:background="@color/darkGrey"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/circularimageview_profile_profilepicture"
+                    android:layout_width="@dimen/size_userprofilesize"
+                    android:layout_height="@dimen/size_userprofilesize"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/ic_account_circle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/view_profile_headerbackground"
+                    app:layout_constraintBottom_toTopOf="@+id/textview_profile_fullname"
+                    app:layout_constraintVertical_chainStyle="packed"/>
+
+                <TextView
+                    android:id="@+id/textview_profile_fullname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Agung Januar Aldiana"
+                    style="@style/UserName"
+                    android:maxLines="1"
+                    app:layout_constraintTop_toBottomOf="@+id/circularimageview_profile_profilepicture"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@+id/view_profile_headerbackground"/>
+
+                <TextView
+                    android:id="@+id/textview_profile_labeladdress"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    style="@style/LabelStyle"
+                    android:text="@string/all_address"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="@dimen/margin_page_horizontalmargin"
+                    android:layout_marginEnd="@dimen/margin_page_horizontalmargin"
+                    app:layout_constraintTop_toBottomOf="@+id/view_profile_headerbackground"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+
+                <TextView
+                    android:id="@+id/textview_profile_address"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="@dimen/margin_page_horizontalmargin"
+                    tools:text="Jalan Pinang 9A Margonda Raya RT 05/05 Kelurahan Pondok Cina Kecamatan Beji Depok Jawa Barat"
+                    app:layout_constraintTop_toBottomOf="@+id/textview_profile_labeladdress"
+                    app:layout_constraintStart_toStartOf="@+id/textview_profile_labeladdress"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <TextView
+                    android:id="@+id/textview_profile_labelemail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    style="@style/LabelStyle"
+                    android:text="@string/all_email"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintTop_toBottomOf="@+id/textview_profile_address"
+                    app:layout_constraintStart_toStartOf="@+id/textview_profile_address"
+                    app:layout_constraintEnd_toEndOf="@+id/textview_profile_address"/>
+
+                <TextView
+                    android:id="@+id/textview_profile_email"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="@dimen/margin_page_horizontalmargin"
+                    tools:text="agung.januar@gmail.com"
+                    app:layout_constraintTop_toBottomOf="@+id/textview_profile_labelemail"
+                    app:layout_constraintStart_toStartOf="@+id/textview_profile_labeladdress"
+                    app:layout_constraintEnd_toEndOf="@+id/textview_profile_labeladdress"/>
+
+                <TextView
+                    android:id="@+id/textview_profile_labelgender"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    style="@style/LabelStyle"
+                    android:text="@string/all_gender"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintTop_toBottomOf="@+id/textview_profile_email"
+                    app:layout_constraintStart_toStartOf="@+id/textview_profile_email"
+                    app:layout_constraintEnd_toEndOf="@+id/textview_profile_email"/>
+
+                <TextView
+                    android:id="@+id/textview_profile_gender"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="@dimen/margin_page_horizontalmargin"
+                    tools:text="Laki-laki"
+                    app:layout_constraintTop_toBottomOf="@+id/textview_profile_labelgender"
+                    app:layout_constraintStart_toStartOf="@+id/textview_profile_labelgender"
+                    app:layout_constraintEnd_toEndOf="@+id/textview_profile_labelgender"/>
+
+                <TextView
+                    android:id="@+id/textview_profile_labelphonenumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    style="@style/LabelStyle"
+                    android:text="@string/all_phonenumber"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintTop_toBottomOf="@+id/textview_profile_gender"
+                    app:layout_constraintStart_toStartOf="@+id/textview_profile_gender"
+                    app:layout_constraintEnd_toEndOf="@+id/textview_profile_gender"/>
+
+                <TextView
+                    android:id="@+id/textview_profile_phonenumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="@dimen/margin_page_horizontalmargin"
+                    android:layout_marginBottom="30dp"
+                    tools:text="9812343223423"
+                    app:layout_constraintTop_toBottomOf="@+id/textview_profile_labelphonenumber"
+                    app:layout_constraintStart_toStartOf="@+id/textview_profile_labelphonenumber"
+                    app:layout_constraintEnd_toEndOf="@+id/textview_profile_labelphonenumber"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </android.support.constraint.ConstraintLayout>
+
+        </ScrollView>
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

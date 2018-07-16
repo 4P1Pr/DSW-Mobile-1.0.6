@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="id.depok.depoksinglewindow.ui.layanankesehatan.HealthCareServiceActivity">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbarlayout_layanankesehatan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_layanankesehatan"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <View
+            android:id="@+id/view_layanankesehatan_healthcareserviceregis"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="@color/softRed"
+            app:layout_constraintTop_toBottomOf="@+id/appbarlayout_layanankesehatan"/>
+
+        <View
+            android:id="@+id/view_layanankesehatan_healthcareserviceregisoverlay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintTop_toBottomOf="@+id/appbarlayout_layanankesehatan"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <ImageView
+            android:id="@+id/imageview_layanankesehatan_regisicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_linewhite_puskesmas"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toStartOf="@+id/view_layanankesehatan_healthcareserviceregis"
+            app:layout_constraintTop_toTopOf="@+id/view_layanankesehatan_healthcareserviceregis"
+            app:layout_constraintBottom_toBottomOf="@+id/view_layanankesehatan_healthcareserviceregis"/>
+
+        <TextView
+            android:id="@+id/textview_layanankesehatan_oldpatientitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/layanankesehatan_registerqueue"
+            style="@style/MenuTitle"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toEndOf="@+id/imageview_layanankesehatan_regisicon"
+            app:layout_constraintTop_toTopOf="@+id/view_layanankesehatan_healthcareserviceregis"
+            app:layout_constraintBottom_toBottomOf="@+id/view_layanankesehatan_healthcareserviceregis"/>
+
+        <View
+            android:id="@+id/view_layanankesehatan_healthcareserviceinfo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="@color/darkGreen"
+            app:layout_constraintTop_toBottomOf="@+id/view_layanankesehatan_healthcareserviceregis"/>
+
+        <View
+            android:id="@+id/view_layanankesehatan_healthcareserviceinfooverlay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintTop_toBottomOf="@+id/view_layanankesehatan_healthcareserviceregis"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <ImageView
+            android:id="@+id/imageview_layanankesehatan_healthcareserviceicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_linewhite_info"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toStartOf="@+id/view_layanankesehatan_healthcareserviceinfo"
+            app:layout_constraintTop_toTopOf="@+id/view_layanankesehatan_healthcareserviceinfo"
+            app:layout_constraintBottom_toBottomOf="@+id/view_layanankesehatan_healthcareserviceinfo"/>
+
+        <TextView
+            android:id="@+id/textview_layanankesehatan_healthcareservicetitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/layanankesehatan_healthcareserviceinformation"
+            style="@style/MenuTitle"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toEndOf="@+id/imageview_layanankesehatan_healthcareserviceicon"
+            app:layout_constraintTop_toTopOf="@+id/view_layanankesehatan_healthcareserviceinfo"
+            app:layout_constraintBottom_toBottomOf="@+id/view_layanankesehatan_healthcareserviceinfo"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

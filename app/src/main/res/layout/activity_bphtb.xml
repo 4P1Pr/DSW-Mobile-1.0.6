@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="id.depok.depoksinglewindow.ui.bphtb.BphtbActivity">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbarlayout_bphtb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_bphtb"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <View
+            android:id="@+id/view_bphtb_checkbphtb"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="@color/orange"
+            app:layout_constraintTop_toBottomOf="@+id/appbarlayout_bphtb"/>
+
+        <View
+            android:id="@+id/view_bphtb_checkbphtboverlay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintTop_toBottomOf="@+id/appbarlayout_bphtb"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <ImageView
+            android:id="@+id/imageview_bphtb_checkbphtbbicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_linewhite_bphtb"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toStartOf="@+id/view_bphtb_checkbphtb"
+            app:layout_constraintTop_toTopOf="@+id/view_bphtb_checkbphtb"
+            app:layout_constraintBottom_toBottomOf="@+id/view_bphtb_checkbphtb"/>
+
+        <TextView
+            android:id="@+id/textview_bphtb_checkbphtbtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cekbphtb_cekbphtb"
+            style="@style/MenuTitle"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toEndOf="@+id/imageview_bphtb_checkbphtbbicon"
+            app:layout_constraintTop_toTopOf="@+id/view_bphtb_checkbphtb"
+            app:layout_constraintBottom_toBottomOf="@+id/view_bphtb_checkbphtb"/>
+
+        <View
+            android:id="@+id/view_bphtb_infobphtb"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="@color/darkGreen"
+            app:layout_constraintTop_toBottomOf="@+id/view_bphtb_checkbphtb"/>
+
+        <View
+            android:id="@+id/view_bphtb_infobphtboverlay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintTop_toBottomOf="@+id/view_bphtb_checkbphtb"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <ImageView
+            android:id="@+id/imageview_bphtb_infobphtbicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_linewhite_info"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toStartOf="@+id/view_bphtb_infobphtb"
+            app:layout_constraintTop_toTopOf="@+id/view_bphtb_infobphtb"
+            app:layout_constraintBottom_toBottomOf="@+id/view_bphtb_infobphtb"/>
+
+        <TextView
+            android:id="@+id/textview_bphtb_infobphtbtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cekbphtb_infobphtb"
+            style="@style/MenuTitle"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toEndOf="@+id/imageview_bphtb_infobphtbicon"
+            app:layout_constraintTop_toTopOf="@+id/view_bphtb_infobphtb"
+            app:layout_constraintBottom_toBottomOf="@+id/view_bphtb_infobphtb"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

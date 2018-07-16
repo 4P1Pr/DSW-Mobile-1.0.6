@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="textsize_page_title">21sp</dimen>
+
+    <dimen name="height_imageslider_height">180dp</dimen>
+
+    <dimen name="margin_page_horizontalmargin">27dp</dimen>
+
+    <dimen name="textsize_onboarding_title">21sp</dimen>
+    <dimen name="textsize_onboarding_body">15sp</dimen>
+
+    <dimen name="size_close_button">50dp</dimen>
+    <dimen name="textsize_login_bigtitle">60sp</dimen>
+    <dimen name="textsize_login_littletitle">30sp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="textsize_home_praytimelabel">14sp</dimen>
+    <dimen name="textsize_home_praytimevalue">17sp</dimen>
+    <dimen name="margin_home_praytime_bottommargin">2dp</dimen>
+    <dimen name="margin_home_praytime_topmargin">2dp</dimen>
+    <dimen name="textsize_header">20sp</dimen>
+    <dimen name="textsize_formlabel">15dp</dimen>
+    <dimen name="textsize_numberlabel">14dp</dimen>
+    <dimen name="padding_hme_gridmenu_verticalpadding">15dp</dimen>
+
+    <dimen name="height_menu">70dp</dimen>
+    <dimen name="textsize_menutitle">19sp</dimen>
+    <dimen name="textsize_menuitem">15sp</dimen>
+
+    <dimen name="margin_icon_leftmargin">17dp</dimen>
+    <dimen name="padding_menu_horizontalmargin">10dp</dimen>
+
+    <dimen name="margin_chevron_marginright">20dp</dimen>
+    <dimen name="size_phoneimagesize">23dp</dimen>
+
+    <dimen name="size_userprofilesize">100dp</dimen>
+    <dimen name="height_profileheaderheight">250dp</dimen>
+
+    <dimen name="textsize_praydate">13sp</dimen>
+    <dimen name="padding_praydate">2dp</dimen>
+
+    <dimen name="textsize_buttonlabel">13sp</dimen>
+    <dimen name="padding_buttonlabel_verticalpadding">13dp</dimen>
+
+    <dimen name="textsize_header_subtitle">12sp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
+</resources>

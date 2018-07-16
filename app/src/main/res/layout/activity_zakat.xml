@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="id.depok.depoksinglewindow.ui.zakat.ZakatActivity">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbarlayout_zakat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_zakat"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <View
+            android:id="@+id/view_zakat_bayarzakat"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="@color/orange"
+            app:layout_constraintTop_toBottomOf="@+id/appbarlayout_zakat"/>
+
+        <View
+            android:id="@+id/view_zakat_bayarzakatoverlay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintTop_toBottomOf="@+id/appbarlayout_zakat"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <ImageView
+            android:id="@+id/imageview_zakat_bayarzakatbicon"
+            android:layout_width="23dp"
+            android:layout_height="35dp"
+            android:src="@drawable/icon_white_zakat"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toStartOf="@+id/view_zakat_bayarzakat"
+            app:layout_constraintTop_toTopOf="@+id/view_zakat_bayarzakat"
+            app:layout_constraintBottom_toBottomOf="@+id/view_zakat_bayarzakat"/>
+
+        <TextView
+            android:id="@+id/textview_zakat_bayarzakatbtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/layananzakat_pembayaranzakat"
+            style="@style/MenuTitle"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toEndOf="@+id/imageview_zakat_bayarzakatbicon"
+            app:layout_constraintTop_toTopOf="@+id/view_zakat_bayarzakat"
+            app:layout_constraintBottom_toBottomOf="@+id/view_zakat_bayarzakat"/>
+
+        <View
+            android:id="@+id/view_zakat_infozakat"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="@color/darkGreen"
+            app:layout_constraintTop_toBottomOf="@+id/view_zakat_bayarzakat"/>
+
+        <View
+            android:id="@+id/view_zakat_infozakatoverlay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintTop_toBottomOf="@+id/view_zakat_bayarzakat"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <ImageView
+            android:id="@+id/imageview_zakat_infozakaticon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_linewhite_info"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toStartOf="@+id/view_zakat_infozakat"
+            app:layout_constraintTop_toTopOf="@+id/view_zakat_infozakat"
+            app:layout_constraintBottom_toBottomOf="@+id/view_zakat_infozakat"/>
+
+        <TextView
+            android:id="@+id/textview_zakat_infozakattitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/layananzakat_infopembayaranzakat"
+            style="@style/MenuTitle"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toEndOf="@+id/imageview_zakat_infozakaticon"
+            app:layout_constraintTop_toTopOf="@+id/view_zakat_infozakat"
+            app:layout_constraintBottom_toBottomOf="@+id/view_zakat_infozakat"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

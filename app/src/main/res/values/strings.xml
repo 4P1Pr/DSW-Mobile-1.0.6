@@ -1,0 +1,265 @@
+    <resources>
+    <string name="app_name">Depok Single Window</string>
+
+    <string name="all_login">Login</string>
+    <string name="all_email">Email</string>
+    <string name="all_password">Password</string>
+    <string name="all_forgotpassword">Lupa Password</string>
+    <string name="all_confirm">Konfirmasi</string>
+    <string name="all_registration">Registrasi</string>
+    <string name="all_fullname">Nama Lengkap</string>
+    <string name="all_gender">Jenis Kelamin</string>
+    <string name="all_phonenumber">No Handphone</string>
+    <string name="all_depokresidences">Penduduk Depok</string>
+    <string name="all_notdepokresidences">Bukan Penduduk Depok</string>
+    <string name="all_address">Alamat</string>
+    <string name="all_province">Provinsi</string>
+    <string name="all_kabupaten">Kabupaten</string>
+    <string name="all_kecamatan">Kecamatan</string>
+    <string name="all_kelurahan">Kelurahan</string>
+    <string name="all_postalcode">Kodepos</string>
+    <string name="all_register">Daftar</string>
+    <string name="all_male">Pria</string>
+    <string name="all_female">Wanita</string>
+    <string name="all_back">Kembali</string>
+    <string name="all_search">Cari</string>
+    <string name="all_submit">Kirim</string>
+    <string name="all_save">Simpan</string>
+    <string name="all_westjava">Jawa Barat</string>
+    <string name="all_depok">Depok</string>
+    <string name="all_next">Berikutnya</string>
+
+    <string name="all_menuPanggilanDarurat">Darurat</string>
+    <string name="all_menuPBB">PBB</string>
+    <string name="all_menuBPHTB">BPHTB</string>
+    <string name="all_menuLayananPerizinan">Perizinan</string>
+    <string name="all_menuLayananKesehatan">Kesehatan</string>
+    <string name="all_menuPertanyaanDanAspirasi">Aspirasi</string>
+    <string name="all_menuPengaduan">Pengaduan</string>
+    <string name="all_menuContactCenter">Contact</string>
+    <string name="all_menuPengaturan">Pengaturan</string>
+    <string name="all_menuLayananPendidikan">Pendidikan</string>
+    <string name="all_menuLayananZakat">Zakat</string>
+    <string name="all_menuPetaDepok">Peta</string>
+    <string name="all_menuLayananRSS">Berita</string>
+    <string name="all_menuInfoKemacetan">Lalu Lintas</string>
+    <string name="all_menuCuacaDepok">Cuaca</string>
+    <string name="all_menuLowonganKerja">Loker</string>
+    <string name="all_menuPLN">PLN</string>
+
+
+    <string name="all_inputnomorpajak">Masukkan nomor pajak Anda</string>
+    <string name="all_nop">NOP</string>
+
+    <string name="all_forminputinfo">Silakan mengisi formulir yang tersedia</string>
+    <string name="all_category">Kategori</string>
+    <string name="all_message">Pesan</string>
+    <string name="all_addfile">Tambah File</string>
+    <string name="all_takephoto">Ambil Foto</string>
+    <string name="all_opengallery">Buka Galeri</string>
+    <string name="all_attachfile">Lampirkan File</string>
+    <string name="all_attachfileinfo">File yang dapat dilampirkan berupa doc, docx, xls, xlsx, pdf</string>
+    <string name="all_fillquestionoraspiration">Isi Aspirasi atau Pertanyaan</string>
+
+    <string name="all_logout">Logout</string>
+    <string name="all_ok">Oke</string>
+    <string name="all_cancel">Batal</string>
+
+    <string name="all_fieldrequired">Harus diisi</string>
+    <string name="all_datarequired">Data harus diisi dengan benar</string>
+    <string name="all_errorconnection">Periksa koneksi internet anda</string>
+    <string name="all_errorwriteandcameradenied">Aplikasi memerlukan akses untuk menulis perangkat penyimpanan dan akses ke kamera</string>
+    <string name="all_errorreadpermissiondenied">Aplikasi memerlukan akses untuk membaca perangkat penyimpanan</string>
+    <string name="all_errorcameranotavailable">Kamera tidak tersedia</string>
+    <string name="all_errorinvalidemail">Format email tidak valid</string>
+    <string name="all_errorLocationPermissionDenied">Aplikasi memerlukan akses lokasi</string>
+    <string name="all_errorGPSTurnedOff">Aplikasi memerlukan akses GPS. Mohon aktifkan GPS anda.</string>
+
+    <string-array name="gender">
+        <item>@string/all_gender</item>
+        <item>@string/all_female</item>
+        <item>@string/all_male</item>
+    </string-array>
+
+    <string-array name="depok_residences">
+        <item>@string/all_depokresidences</item>
+        <item>@string/all_notdepokresidences</item>
+    </string-array>
+
+    <string-array name="aspiration_categories">
+        <item>Pilih Kategori</item>
+        <item>Permintaan Informasi</item>
+        <item>Pengaduan</item>
+        <item>Izin Usaha</item>
+        <item>Kebersihan</item>
+        <item>Jalan</item>
+        <item>Taman</item>
+        <item>Pendidikan</item>
+        <item>Kesehatan</item>
+        <item>PBB</item>
+        <item>Transportasi Umum</item>
+        <item>Kebakaran</item>
+        <item>Lainnya</item>
+        <item>Banjir</item>
+        <item>Parkir Liar</item>
+        <item>Wabah Penyakit</item>
+        <item>Pohon Tumbang</item>
+        <item>Monitoring</item>
+    </string-array>
+
+    <!--OnBoarding-->
+    <string name="onboarding_next">Berikutnya</string>
+    <string name="onboarding_skip">Lewati</string>
+    <string name="onboarding_dologin">Lakukan Login</string>
+    <string name="onboarding_gotomain">Masuk ke Menu utama</string>
+
+    <!--OnBoardingSlide-->
+    <string name="onboardingslidepage_title1">Panggilan Darurat</string>
+    <string name="onboardingslidepage_body1">Akses mudah panggilan darurat untuk kejadian/musibah tak terduga</string>
+    <string name="onboardingslidepage_title2">Cek PBB, BPHTB, Perizinan</string>
+    <string name="onboardingslidepage_body2">Pengecekan PBB, BPHTB, dan proses perizinan Anda secara online dengan satu langkah mudah</string>
+    <string name="onboardingslidepage_title3">Jadi Masyarakat Aktif</string>
+    <string name="onboardingslidepage_body3">Suarakan inspirasi, aspirasi, keluhan, dan pengaduan tentang lingkungan Anda dan seputar pelayanan publik</string>
+
+    <!--Login-->
+    <string name="login_depok">Depok</string>
+    <string name="login_singlewindow">Single Window</string>
+    <string name="login_forgotpassword">Lupa password</string>
+    <string name="login_donthaveaccount">Belum punya akun? Daftar di sini</string>
+    <string name="login_registerhere">Daftar di sini</string>
+    <string name="login_loginfailed">Login gagal</string>
+    <string name="login_loginsuccess">Login berhasil</string>
+
+    <!--Forgot Password-->
+    <string name="forgotpassword_guide">Silakan masukkan email Anda, kami akan mengirimkan password baru ke alamat email Anda.</string>
+
+    <!--Register-->
+    <string name="register_guide">Isilah dengan data yang benar</string>
+    <string name="register_agreement">Dengan menekan tombol Daftar Anda berarti menyetujui semua peraturan dalam penggunaan aplikasi ini</string>
+    <string name="register_registersuccess">Registrasi berhasil</string>
+    <string name="register_registerfailed">Registrasi gagal</string>
+
+    <!--Home-->
+    <string name="home_depokpraytime">Waktu sholat untuk wilayah Depok</string>
+    <string name="home_subuh">Subuh</string>
+    <string name="home_dzuhur">Dzuhur</string>
+    <string name="home_ashar">Ashar</string>
+    <string name="home_maghrib">Maghrib</string>
+    <string name="home_isya">Isya</string>
+
+    <!--Cek PBB-->
+    <string name="cekpbb_tagihanpbb">Lihat PBB Anda</string>
+    <string name="cekpbb_informasipbb">Tentang PBB</string>
+
+    <!--Tagihan PBB-->
+    <string name="tagihanpbb_cekpbbnow">Cek PBB Anda sekarang!</string>
+    <string name="tagihanpbb_info1">-Melakukan cek nilai PBB</string>
+    <string name="tagihanpbb_info2">-Melihat riwayat status pembayaran PBB</string>
+
+    <!--Cek BPHTB-->
+    <string name="cekbphtb_cekbhtbnow">Cek BPHTB Anda sekarang!</string>
+    <string name="cekbphtb_info1">-Melakukan cek nilai BPHTB</string>
+    <string name="cekbphtb_info2">-Melihat riwayat status pembayaran BPHTB</string>
+    <string name="cekbphtb_cekbphtb">Lihat BPHTB Anda</string>
+    <string name="cekbphtb_infobphtb">Tentang BPHTB</string>
+
+    <!--Layanan Perizinan-->
+    <string name="layananperizinan_lacakperizinan">Lihat Status Perizinan Anda</string>
+    <string name="layananperizinan_informasiperizinan">Tentang Perizinan</string>
+    <string name="layananperizinan_perizinanonline">Perizinan Online</string>
+
+    <!--Lacak Perizinan-->
+    <string name="lacakperizinan_lacakperizinan">Lacak perizinan Anda</string>
+    <string name="lacakperizinan_inputtokennumber">Masukkan nomor token Anda</string>
+    <string name="lacakperizinan_tokennumber">Nomor Token</string>
+
+    <!--Layanan Kesehatan-->
+    <string name="layanankesehatan_newpatien">Pasien Baru</string>
+    <string name="layanankesehatan_oldpatien">Pasien Lama</string>
+    <string name="layanankesehatan_registerqueue">Registrasi Puskesmas</string>
+    <string name="layanankesehatan_healthcareserviceinformation">Tentang Kesehatan</string>
+
+    <!--Layanan Pendidikan-->
+    <string name="layananpendidikan_schoolregister">Data Sekolah Depok</string>
+    <string name="layananpendidikan_passinggrade">Lihat Passing Grade</string>
+    <string name="layananpendidikan_schoolinformation">Seputar Pendidikan</string>
+    <string name="layananpendidikan_ppdb">Informasi PPDB</string>
+    <string name="layananpendidikan_schoolcalendar">Kalender Pendidikan</string>
+
+    <!--Layanan Zakat-->
+    <string name="layananzakat_pembayaranzakat">Layanan Pembayaran Zakat</string>
+    <string name="layananzakat_infopembayaranzakat">Tentang Zakat</string>
+
+    <!--Peta Depok-->
+    <string name="peta_depok">Peta Depok</string>
+
+    <!--RSS Depok-->
+    <string name="rss_depok">Berita Seputar Depok</string>
+
+    <!--Layanan PLN-->
+    <string name="pembayaranpln">Pembayaran PLN</string>
+    <string name="infopln">Cek Informasi PLN</string>
+
+    <!--Old Patient-->
+    <string name="oldpatient_queueregister">Pendaftaran Antrian</string>
+    <string name="oldpatient_inputqueuedata">Isi data Antrian</string>
+    <string name="oldpatient_choosepuskesmas">PILIH PUSKESMAS</string>
+    <string name="oldpatient_chooseservice">PILIH LAYANAN</string>
+    <string name="oldpatinet_medicalrecnumber">Nomor Rekam Medis</string>
+
+    <!--Question and Aspiration-->
+    <string name="questionandaspiration_headerinfo">Aspirasi dan pertanyaan Anda membantu kami menjadi lebih baik</string>
+    <string name="questionandaspiration_createnewquestion">Buat Pertanyaan &amp; Aspirasi Baru</string>
+
+    <!--Complaint page-->
+    <string name="complaintpage_createnewcomplaint">Buat Aspirasi Baru</string>
+    <string name="complaintpage_headerinfo">Laporkan keluhan Anda agar kami dapat membantu Anda</string>
+    <string name="complaintpage_cancelattachimage">Batal tambah foto</string>
+    <string name="complaintpage_cancelattachfile">Batal tambah file</string>
+    <string name="complaintpage_failedfetchcategory">Gagal mengambil data kategori</string>
+    <string name="complaintpage_successsendingform">Formulir berhasil dikirim</string>
+    <string name="complaintpage_failedsendingform">Formulir gagal dikirim</string>
+    <string name="complaintpage_nodata">Tidak ada data</string>
+    <string name="complaintpage_failedloaddata">Gagal mengambil data.</string>
+    <string name="complaintpage_addInsidentCoordinate">Tambah Posisi Kejadian</string>
+    <string name="complaintpage_cancelAddInsidentCoordinate">Batal Tambah Posisi Kejadian</string>
+    <string name="complaintpage_editIncidentLocation">Edit Posisi Kejadian</string>
+
+    <!--Settings-->
+    <string name="settings_account">Akun</string>
+    <string name="settings_seeprofile">Lihat profil</string>
+    <string name="settings_editpassword">Ubah password</string>
+    <string name="settings_about">Tentang</string>
+    <string name="settings_devteam">Tim pengembang</string>
+    <string name="settings_logoutconfirmation">Anda yakin mau logout dari aplikasi?</string>
+
+    <!--Emergency Dialog-->
+    <string name="emergencydialog_police">Polisi</string>
+    <string name="emergencydialog_ambulance">Ambulance</string>
+    <string name="emergencydialog_firefighter">Pemadam Kebakaran</string>
+    <string name="emergencydialog_emergencycall">Panggilan Darurat</string>
+    <string name="emergencydialog_pln">PLN</string>
+    <string name="emergencydialog_policenumber">110</string>
+    <string name="emergencydialog_ambulancenumber">119</string>
+    <string name="emergencydialog_firefighternumber">113</string>
+    <string name="emergencydialog_emergencycallnumber">112</string>
+    <string name="emergencydialog_plnnumber">123</string>
+
+    <!--Edit Password-->
+    <string name="editpassword_oldpassword_capital">PASSWORD LAMA</string>
+    <string name="editpassword_newpassword_capital">PASSWORD BARU</string>
+    <string name="editpassword_newpasswordconfirm_capital">KONFIRMASI PASSWORD BARU</string>
+    <string name="editpassword_newpassordconfirm_notequal">Harus sama dengan password baru</string>
+    <string name="editpassword_editpasswordsuccess">Password berhasil diubah</string>
+    <string name="editpassword_editpasswordfailed">Password gagal diubah</string>
+    <string name="title_activity_home_tab">HomeTabActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_3">Tab 3</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

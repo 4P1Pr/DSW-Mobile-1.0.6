@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="id.depok.depoksinglewindow.ui.pbb.PbbActivity">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbarlayout_cekpbb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_cekpbb"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <View
+            android:id="@+id/view_cekpbb_tagihanpbb"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="@color/orange"
+            app:layout_constraintTop_toBottomOf="@+id/appbarlayout_cekpbb"/>
+
+        <View
+            android:id="@+id/view_cekpbb_tagihanpbboverlay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintTop_toBottomOf="@+id/appbarlayout_cekpbb"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <ImageView
+            android:id="@+id/imageview_cekpbb_tagihanpbbicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_linewhite_pbb"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toStartOf="@+id/view_cekpbb_tagihanpbb"
+            app:layout_constraintTop_toTopOf="@+id/view_cekpbb_tagihanpbb"
+            app:layout_constraintBottom_toBottomOf="@+id/view_cekpbb_tagihanpbb"/>
+
+        <TextView
+            android:id="@+id/textview_cekpbb_tagihanpbbtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cekpbb_tagihanpbb"
+            style="@style/MenuTitle"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toEndOf="@+id/imageview_cekpbb_tagihanpbbicon"
+            app:layout_constraintTop_toTopOf="@+id/view_cekpbb_tagihanpbb"
+            app:layout_constraintBottom_toBottomOf="@+id/view_cekpbb_tagihanpbb"/>
+
+        <View
+            android:id="@+id/view_cekpbb_informasipbb"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="@color/darkGreen"
+            app:layout_constraintTop_toBottomOf="@+id/view_cekpbb_tagihanpbb"/>
+
+        <View
+            android:id="@+id/view_cekpbb_informasipbboverlay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintTop_toBottomOf="@+id/view_cekpbb_tagihanpbb"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <ImageView
+            android:id="@+id/imageview_cekpbb_informasipbbicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_linewhite_info"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toStartOf="@+id/view_cekpbb_informasipbb"
+            app:layout_constraintTop_toTopOf="@+id/view_cekpbb_informasipbb"
+            app:layout_constraintBottom_toBottomOf="@+id/view_cekpbb_informasipbb"/>
+
+        <TextView
+            android:id="@+id/textview_cekpbb_informasipbbtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cekpbb_informasipbb"
+            style="@style/MenuTitle"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toEndOf="@+id/imageview_cekpbb_informasipbbicon"
+            app:layout_constraintTop_toTopOf="@+id/view_cekpbb_informasipbb"
+            app:layout_constraintBottom_toBottomOf="@+id/view_cekpbb_informasipbb"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

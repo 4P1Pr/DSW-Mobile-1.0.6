@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="420dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="420dp"
+            android:minWidth="250dp">
+
+            <TextView
+                android:id="@+id/textview_emergencydialog_titleemergencycall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/emergencydialog_emergencycall"
+                style="@style/EmergencyDialogLabelStyle"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/textview_emergencydialog_emergencycallnumber"
+                style="@style/NumberStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:text="@string/emergencydialog_emergencycallnumber"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textview_emergencydialog_titleemergencycall" />
+
+            <ImageView
+                android:id="@+id/imageview_emergencydialog_emergencycallicon"
+                android:layout_width="@dimen/size_phoneimagesize"
+                android:layout_height="@dimen/size_phoneimagesize"
+                android:src="@drawable/icon_phone"
+                android:layout_marginEnd="@dimen/padding_menu_horizontalmargin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textview_emergencydialog_titleemergencycall"
+                app:layout_constraintBottom_toBottomOf="@+id/textview_emergencydialog_emergencycallnumber"/>
+
+            <View
+                android:id="@+id/line_emergencydialog_emergencycallitemline"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/lightGrey"
+                android:layout_marginTop="@dimen/padding_menu_horizontalmargin"
+                android:layout_marginStart="@dimen/padding_menu_horizontalmargin"
+                android:layout_marginEnd="@dimen/padding_menu_horizontalmargin"
+                app:layout_constraintTop_toBottomOf="@+id/textview_emergencydialog_emergencycallnumber"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <View
+                android:id="@+id/view_emergencydialog_emergencycalloverlay"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintTop_toTopOf="@+id/textview_emergencydialog_titleemergencycall"
+                app:layout_constraintBottom_toBottomOf="@+id/line_emergencydialog_emergencycallitemline"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/textview_emergencydialog_titlepolice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/emergencydialog_police"
+                style="@style/EmergencyDialogLabelStyle"
+                app:layout_constraintTop_toBottomOf="@+id/line_emergencydialog_emergencycallitemline"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/textview_emergencydialog_policenumber"
+                style="@style/NumberStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:text="@string/emergencydialog_policenumber"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textview_emergencydialog_titlepolice" />
+
+            <ImageView
+                android:id="@+id/imageview_emergencydialog_policephoneicon"
+                android:layout_width="@dimen/size_phoneimagesize"
+                android:layout_height="@dimen/size_phoneimagesize"
+                android:src="@drawable/icon_phone"
+                android:layout_marginEnd="@dimen/padding_menu_horizontalmargin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textview_emergencydialog_titlepolice"
+                app:layout_constraintBottom_toBottomOf="@+id/textview_emergencydialog_policenumber"/>
+
+            <View
+                android:id="@+id/line_emergencydialog_policeitemline"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/lightGrey"
+                android:layout_marginTop="@dimen/padding_menu_horizontalmargin"
+                android:layout_marginStart="@dimen/padding_menu_horizontalmargin"
+                android:layout_marginEnd="@dimen/padding_menu_horizontalmargin"
+                app:layout_constraintTop_toBottomOf="@+id/textview_emergencydialog_policenumber"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <View
+                android:id="@+id/view_emergencydialog_policeoverlay"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintTop_toTopOf="@+id/textview_emergencydialog_titlepolice"
+                app:layout_constraintBottom_toBottomOf="@+id/line_emergencydialog_policeitemline"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/textview_emergencydialog_titleambulance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/emergencydialog_ambulance"
+                style="@style/EmergencyDialogLabelStyle"
+                app:layout_constraintTop_toBottomOf="@+id/line_emergencydialog_policeitemline"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/textview_emergencydialog_ambulancenumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/emergencydialog_ambulancenumber"
+                style="@style/NumberStyle"
+                app:layout_constraintTop_toBottomOf="@+id/textview_emergencydialog_titleambulance"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <ImageView
+                android:id="@+id/imageview_emergencydialog_ambulancephoneicon"
+                android:layout_width="@dimen/size_phoneimagesize"
+                android:layout_height="@dimen/size_phoneimagesize"
+                android:src="@drawable/icon_phone"
+                android:layout_marginEnd="@dimen/padding_menu_horizontalmargin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textview_emergencydialog_titleambulance"
+                app:layout_constraintBottom_toBottomOf="@+id/textview_emergencydialog_ambulancenumber"/>
+
+            <View
+                android:id="@+id/line_emergencydialog_ambulancetemline"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/lightGrey"
+                android:layout_marginTop="@dimen/padding_menu_horizontalmargin"
+                android:layout_marginStart="@dimen/padding_menu_horizontalmargin"
+                android:layout_marginEnd="@dimen/padding_menu_horizontalmargin"
+                app:layout_constraintTop_toBottomOf="@+id/textview_emergencydialog_ambulancenumber"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+
+            <View
+                android:id="@+id/view_emergencydialog_ambulanceoverlay"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintTop_toTopOf="@+id/textview_emergencydialog_titleambulance"
+                app:layout_constraintBottom_toBottomOf="@+id/line_emergencydialog_ambulancetemline"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/textview_emergencydialog_titlefirefighter"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/emergencydialog_firefighter"
+                style="@style/EmergencyDialogLabelStyle"
+                app:layout_constraintTop_toBottomOf="@+id/line_emergencydialog_ambulancetemline"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/textview_emergencydialog_firefighternumber"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:text="@string/emergencydialog_firefighternumber"
+                style="@style/NumberStyle"
+                app:layout_constraintTop_toBottomOf="@+id/textview_emergencydialog_titlefirefighter"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <ImageView
+                android:id="@+id/imageview_emergencydialog_firefighterphoneicon"
+                android:layout_width="@dimen/size_phoneimagesize"
+                android:layout_height="@dimen/size_phoneimagesize"
+                android:src="@drawable/icon_phone"
+                android:layout_marginEnd="@dimen/padding_menu_horizontalmargin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textview_emergencydialog_titlefirefighter"
+                app:layout_constraintBottom_toBottomOf="@+id/textview_emergencydialog_firefighternumber"/>
+
+            <View
+                android:id="@+id/line_emergencydialog_firefighteritemline"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/lightGrey"
+                android:layout_marginTop="@dimen/padding_menu_horizontalmargin"
+                android:layout_marginStart="@dimen/padding_menu_horizontalmargin"
+                android:layout_marginEnd="@dimen/padding_menu_horizontalmargin"
+                app:layout_constraintTop_toBottomOf="@+id/textview_emergencydialog_firefighternumber"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <View
+                android:id="@+id/view_emergencydialog_firefighteroverlay"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintTop_toTopOf="@+id/textview_emergencydialog_titlefirefighter"
+                app:layout_constraintBottom_toBottomOf="@+id/line_emergencydialog_firefighteritemline"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/textview_emergencydialog_titlepln"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/emergencydialog_pln"
+                style="@style/EmergencyDialogLabelStyle"
+                app:layout_constraintTop_toBottomOf="@+id/line_emergencydialog_firefighteritemline"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/textview_emergencydialog_plnnumber"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:text="@string/emergencydialog_plnnumber"
+                style="@style/NumberStyle"
+                app:layout_constraintTop_toBottomOf="@+id/textview_emergencydialog_titlepln"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <ImageView
+                android:id="@+id/imageview_emergencydialog_plnphoneicon"
+                android:layout_width="@dimen/size_phoneimagesize"
+                android:layout_height="@dimen/size_phoneimagesize"
+                android:src="@drawable/icon_phone"
+                android:layout_marginEnd="@dimen/padding_menu_horizontalmargin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textview_emergencydialog_titlepln"
+                app:layout_constraintBottom_toBottomOf="@+id/textview_emergencydialog_plnnumber"/>
+
+            <View
+                android:visibility="gone"
+                android:id="@+id/line_emergencydialog_plnitemline"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/lightGrey"
+                android:layout_marginTop="@dimen/padding_menu_horizontalmargin"
+                android:layout_marginStart="@dimen/padding_menu_horizontalmargin"
+                android:layout_marginEnd="@dimen/padding_menu_horizontalmargin"
+                app:layout_constraintTop_toBottomOf="@+id/textview_emergencydialog_plnnumber"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <View
+                android:id="@+id/view_emergencydialog_plnoverlay"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintTop_toTopOf="@+id/textview_emergencydialog_titlepln"
+                app:layout_constraintBottom_toBottomOf="@+id/line_emergencydialog_plnitemline"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <Button
+                android:id="@+id/button_emergencycall_backbutton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="@dimen/padding_menu_horizontalmargin"
+                android:layout_marginEnd="@dimen/padding_menu_horizontalmargin"
+                android:layout_marginBottom="10dp"
+                android:text="@string/all_back"
+                android:theme="@style/GreyButton"
+                app:layout_constraintTop_toBottomOf="@+id/view_emergencydialog_plnoverlay"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+</layout>
