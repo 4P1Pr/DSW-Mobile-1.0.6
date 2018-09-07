@@ -28,6 +28,16 @@ class AnalyticsManager(private val apiService: ApiService, private val userDataS
         //}
     }
 
+    fun logSuccessfulLoginSigap() {
+        //if (!BuildConfig.DEBUG) {
+        val bundle = Bundle()
+        bundle.putString(FirebaseAnalytics.Param.SIGN_UP_METHOD, "email")
+        //firebaseAnalytics.logEvent(FirebaseAnalytics.Event.LOGIN, bundle)
+        apiService.sendLogActivity(userDataSource.getUserSigap()!!.authtoken,LogActivityRequest(userDataSource.getUserSigap()!!.authtoken, userDataSource.getUserSigap()!!.idsigap,FirebaseAnalytics.Event.LOGIN)).subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread()).subscribe()
+        //}
+    }
+
     fun logSuccessfulRegister() {
         //if (!BuildConfig.DEBUG) {
             val bundle = Bundle()

@@ -35,6 +35,10 @@ class RegisterPresenter:
             status = false
             view?.showErrorFullName(R.string.all_fieldrequired)
         }
+        if (form.nickName.isEmpty()) {
+            status = false
+            view?.showErrorFullName(R.string.all_fieldrequired)
+        }
         if (form.gender == 0) {
             status = false
         }

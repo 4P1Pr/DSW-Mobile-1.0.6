@@ -12,6 +12,8 @@ interface PbbContract {
         fun showTagihanPBB()
 
         fun showInformasiPBB()
+
+        fun showInfoPembayaranPBB()
     }
 
     interface Presenter: MvpContract.BasePresenter<View> {

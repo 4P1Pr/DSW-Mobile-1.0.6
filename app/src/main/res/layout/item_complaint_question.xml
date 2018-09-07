@@ -68,6 +68,16 @@
                 tools:text="Ditangani oleh Dinas Lingkungan"
                 style="@style/HeaderSubtitle"
                 app:layout_constraintTop_toBottomOf="@+id/textview_complaintquestionitem_createddate"
+                app:layout_constraintBottom_toTopOf="@+id/textview_complaintlist_location"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textview_complaintlist_location"
+                tools:text="Location"
+                style="@style/HeaderSubtitle"
+                app:layout_constraintTop_toBottomOf="@+id/textview_complaintquestionitem_handledby"
                 app:layout_constraintBottom_toTopOf="@+id/imageview_complaintquestionitem_imagethumbnail"
                 app:layout_constraintStart_toStartOf="parent"/>
 
@@ -79,7 +89,7 @@
                 android:layout_marginTop="10dp"
                 android:scaleType="centerCrop"
                 android:background="@color/lightGrey"
-                app:layout_constraintTop_toBottomOf="@+id/textview_complaintquestionitem_handledby"
+                app:layout_constraintTop_toBottomOf="@+id/textview_complaintlist_location"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/imageview_complaintquestionitem_fileicon"
                 app:layout_constraintBottom_toBottomOf="@+id/textview_complaintquestionitem_message"/>

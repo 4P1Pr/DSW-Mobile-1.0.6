@@ -13,6 +13,10 @@ class AuthRemoteDataSource(private val apiService: ApiService) : AuthDataSource 
         return apiService.login(loginRequest)
     }
 
+    override fun loginSigap(loginSigapRequest: LoginSigapRequest) : Single<LoginSigapResponse> {
+        return apiService.loginSigap(loginSigapRequest)
+    }
+
     override fun register(registerRequest: RegisterRequest): Single<RegisterResponse> {
         return apiService.register(registerRequest)
     }

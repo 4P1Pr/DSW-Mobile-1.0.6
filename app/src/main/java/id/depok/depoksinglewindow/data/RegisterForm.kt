@@ -8,6 +8,7 @@ import java.io.Serializable
  */
 data class RegisterForm(
         val fullName: String,
+        val nickName: String,
         val gender: Int,
         val email: String,
         val phoneNumber: String,
@@ -27,6 +28,7 @@ data class RegisterForm(
                 this.phoneNumber,
                 this.isDepokResidents,
                 this.fullName,
+                this.nickName,
                 this.gender - 1,
                 this.address,
                 this.postalCode,

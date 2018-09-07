@@ -39,6 +39,13 @@ class PbbActivity : BaseActivity<PbbContract.Presenter>(), PbbContract.View {
         startActivity(intent)
     }
 
+    override fun showInfoPembayaranPBB() {
+        val intent = Intent(this, WebPageActivity::class.java)
+        intent.putExtra(ARG_TITLE, getString(R.string.cekpbb_infopembayaranpbb))
+        intent.putExtra(ARG_URL, ApiSettings.URL_INFO_PEMBAYARAN_PBB)
+        startActivity(intent)
+    }
+
     private fun initialize() {
         setSupportActionBar(binding.toolbarCekpbb)
 
@@ -49,6 +56,9 @@ class PbbActivity : BaseActivity<PbbContract.Presenter>(), PbbContract.View {
             }
             viewCekpbbInformasipbboverlay.setOnClickListener {
                 presenter.onPBBMenuClicked(CekPBBMenuType.INFORMASI_PBB)
+            }
+            viewCekpbbInfopembayaranpbboverlay.setOnClickListener {
+                presenter.onPBBMenuClicked(CekPBBMenuType.INFO_PEMBAYARAN_PBB)
             }
         }
 

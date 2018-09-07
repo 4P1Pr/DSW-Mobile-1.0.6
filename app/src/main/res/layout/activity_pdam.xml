@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="id.depok.depoksinglewindow.ui.pdam.PdamActivity">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbarlayout_pdam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_pdam"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <View
+            android:id="@+id/view_pdam_register"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="@color/softRed"
+            app:layout_constraintTop_toBottomOf="@+id/appbarlayout_pdam"/>
+
+        <View
+            android:id="@+id/view_pdam_registeroverlay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintTop_toBottomOf="@+id/appbarlayout_pdam"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <ImageView
+            android:id="@+id/imageview_pdam_pdamicon"
+            android:layout_width="23dp"
+            android:layout_height="35dp"
+            android:src="@drawable/registrasi_white"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toStartOf="@+id/view_pdam_register"
+            app:layout_constraintTop_toTopOf="@+id/view_pdam_register"
+            app:layout_constraintBottom_toBottomOf="@+id/view_pdam_register"/>
+
+        <TextView
+            android:id="@+id/textview_pdam_registerpdamtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/registerpdam"
+            style="@style/MenuTitle"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toEndOf="@+id/imageview_pdam_pdamicon"
+            app:layout_constraintTop_toTopOf="@+id/view_pdam_register"
+            app:layout_constraintBottom_toBottomOf="@+id/view_pdam_register"/>
+
+        <View
+            android:id="@+id/view_pdam_infopdam"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="@color/brightGreen"
+            app:layout_constraintTop_toBottomOf="@+id/view_pdam_register"/>
+
+        <View
+            android:id="@+id/view_pdam_infopdamoverlay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintTop_toBottomOf="@+id/view_pdam_register"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <ImageView
+            android:id="@+id/imageview_pdam_infopdamicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/info_layanan_white"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toStartOf="@+id/view_pdam_infopdam"
+            app:layout_constraintTop_toTopOf="@+id/view_pdam_infopdam"
+            app:layout_constraintBottom_toBottomOf="@+id/view_pdam_infopdam"/>
+
+        <TextView
+            android:id="@+id/textview_pdam_infopdamtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/infopdam"
+            style="@style/MenuTitle"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toEndOf="@+id/imageview_pdam_infopdamicon"
+            app:layout_constraintTop_toTopOf="@+id/view_pdam_infopdam"
+            app:layout_constraintBottom_toBottomOf="@+id/view_pdam_infopdam"/>
+
+        <View
+            android:id="@+id/view_pdam_jaringan_layanan"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="@color/darkGreen"
+            app:layout_constraintTop_toBottomOf="@+id/view_pdam_infopdam"/>
+
+        <View
+            android:id="@+id/view_pdam_jaringan_layananoverlay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintTop_toBottomOf="@+id/view_pdam_infopdam"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <ImageView
+            android:id="@+id/imageview_pdam_jaringan_layananicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/jaringan_white"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toStartOf="@+id/view_pdam_jaringan_layanan"
+            app:layout_constraintTop_toTopOf="@+id/view_pdam_jaringan_layanan"
+            app:layout_constraintBottom_toBottomOf="@+id/view_pdam_jaringan_layanan"/>
+
+        <TextView
+            android:id="@+id/textview_pdam_jaringan_layanan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/jaringanlayananpdam"
+            style="@style/MenuTitle"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toEndOf="@+id/imageview_pdam_jaringan_layananicon"
+            app:layout_constraintTop_toTopOf="@+id/view_pdam_jaringan_layanan"
+            app:layout_constraintBottom_toBottomOf="@+id/view_pdam_jaringan_layanan"/>
+
+        <View
+            android:id="@+id/view_pdam_cektagihan"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="@color/orange"
+            app:layout_constraintTop_toBottomOf="@+id/view_pdam_jaringan_layanan"/>
+
+        <View
+            android:id="@+id/view_pdam_cektagihanoverlay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintTop_toBottomOf="@+id/view_pdam_jaringan_layanan"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <ImageView
+            android:id="@+id/imageview_pdam_cektagihanicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cek_tagihan_white"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toStartOf="@+id/view_pdam_cektagihan"
+            app:layout_constraintTop_toTopOf="@+id/view_pdam_cektagihan"
+            app:layout_constraintBottom_toBottomOf="@+id/view_pdam_cektagihan"/>
+
+        <TextView
+            android:id="@+id/textview_pdam_cektagihantittle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tagihanpdam"
+            style="@style/MenuTitle"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toEndOf="@+id/imageview_pdam_cektagihanicon"
+            app:layout_constraintTop_toTopOf="@+id/view_pdam_cektagihan"
+            app:layout_constraintBottom_toBottomOf="@+id/view_pdam_cektagihan"/>
+
+        <View
+            android:id="@+id/view_pdam_infopembayaran"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="@color/softRed"
+            app:layout_constraintTop_toBottomOf="@+id/view_pdam_cektagihan"/>
+
+        <View
+            android:id="@+id/view_pdam_infopembayaranoverlay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintTop_toBottomOf="@+id/view_pdam_cektagihan"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <ImageView
+            android:id="@+id/imageview_pdam_infopembayaranicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/info_pembayaran_white"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toStartOf="@+id/view_pdam_infopembayaran"
+            app:layout_constraintTop_toTopOf="@+id/view_pdam_infopembayaran"
+            app:layout_constraintBottom_toBottomOf="@+id/view_pdam_infopembayaran"/>
+
+        <TextView
+            android:id="@+id/textview_pdam_infopembayarantittle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/infopembayaran"
+            style="@style/MenuTitle"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toEndOf="@+id/imageview_pdam_infopembayaranicon"
+            app:layout_constraintTop_toTopOf="@+id/view_pdam_infopembayaran"
+            app:layout_constraintBottom_toBottomOf="@+id/view_pdam_infopembayaran"/>
+
+        <View
+            android:id="@+id/view_pdam_simulasitagihan"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="@color/brightGreen"
+            app:layout_constraintTop_toBottomOf="@+id/view_pdam_infopembayaran"/>
+
+        <View
+            android:id="@+id/view_pdam_simulasitagihanoverlay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintTop_toBottomOf="@+id/view_pdam_infopembayaran"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <ImageView
+            android:id="@+id/imageview_pdam_simulasitagihanicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/simulasi_white"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toStartOf="@+id/view_pdam_simulasitagihan"
+            app:layout_constraintTop_toTopOf="@+id/view_pdam_simulasitagihan"
+            app:layout_constraintBottom_toBottomOf="@+id/view_pdam_simulasitagihan"/>
+
+        <TextView
+            android:id="@+id/textview_pdam_simulasitagihantittle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/simulasi"
+            style="@style/MenuTitle"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toEndOf="@+id/imageview_pdam_simulasitagihanicon"
+            app:layout_constraintTop_toTopOf="@+id/view_pdam_simulasitagihan"
+            app:layout_constraintBottom_toBottomOf="@+id/view_pdam_simulasitagihan"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

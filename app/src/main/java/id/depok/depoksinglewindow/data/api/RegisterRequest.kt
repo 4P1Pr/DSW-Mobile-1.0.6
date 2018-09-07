@@ -23,6 +23,10 @@ data class RegisterRequest(
     @Expose
     val name: String,
 
+    @SerializedName("nickname")
+    @Expose
+    val nickname: String,
+
     @SerializedName("gender")
     @Expose
     val gender: Int,

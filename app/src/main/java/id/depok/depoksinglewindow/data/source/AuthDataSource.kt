@@ -14,5 +14,5 @@ interface AuthDataSource {
     fun changePassword(changePasswordRequest: ChangePasswordRequest) : Single<ChangePasswordResponse>
 
 
-
+    fun loginSigap(loginSigapRequest: LoginSigapRequest): Single<LoginSigapResponse>
 }

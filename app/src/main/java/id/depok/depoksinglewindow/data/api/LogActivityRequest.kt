@@ -16,5 +16,4 @@ data class LogActivityRequest(
         @SerializedName("event_name")
         @Expose
         val event_name: String
-
        )

@@ -99,10 +99,12 @@ class HomePresenter (private val userRepository: UserRepository,
             AppMenuType.INFO_LOWONGAN_KERJA -> {
                 view?.showInfoLowonganKerja()
             }
-            AppMenuType.PLN -> {
-                view?.showPLN()
+            AppMenuType.PLN_DAN_PDAM -> {
+                view?.showPLNdanPDAM()
             }
-            AppMenuType.PENGADUAN -> TODO()
+            AppMenuType.PENGADUAN -> {
+                view?.showPengaduan()
+            }
         }
     }
 

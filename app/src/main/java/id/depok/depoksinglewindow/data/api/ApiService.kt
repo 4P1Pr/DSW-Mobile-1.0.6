@@ -13,6 +13,9 @@ interface ApiService {
     @POST(ApiSettings.PATH_LOGIN)
     fun login(@Body loginRequest: LoginRequest) : Single<LoginResponse>
 
+    @POST(ApiSettings.LOGIN_SIGAP)
+    fun loginSigap(@Body loginSigapRequest:LoginSigapRequest) : Single<LoginSigapResponse>
+
     @POST(ApiSettings.PATH_REGISTER)
     fun register(@Body registerRequest: RegisterRequest) : Single<RegisterResponse>
 

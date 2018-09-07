@@ -21,6 +21,7 @@ class PbbPresenter :
         when(menu) {
             (CekPBBMenuType.TAGIHAN_PBB) -> view?.showTagihanPBB()
             (CekPBBMenuType.INFORMASI_PBB) -> view?.showInformasiPBB()
+            (CekPBBMenuType.INFO_PEMBAYARAN_PBB) -> view?.showInfoPembayaranPBB()
             else -> {
             }
         }

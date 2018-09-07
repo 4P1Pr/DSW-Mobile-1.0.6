@@ -19,8 +19,8 @@ android {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         multiDexEnabled true
-        versionCode 18
-        versionName "1.0.6"
+        versionCode 23
+        versionName "1.1.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
@@ -47,8 +47,8 @@ android {
         }
 
         release {
-            minifyEnabled true
-            shrinkResources true
+            minifyEnabled false
+            shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.release
         }
@@ -62,7 +62,7 @@ android {
 
         production {
             dimension "default"
-            buildConfigField("String", "BASE_URL", "\"http://182.23.86.31\"")
+            buildConfigField("String", "BASE_URL", "\"http://103.113.31.29\"")
             buildConfigField("String", "PATH_API", "\"/dsw/index.php/api/\"")
             buildConfigField("String", "PRAY_TIME_URL", "\"https://time.siswadi.com\"")
             buildConfigField("String", "SIGAP_API", "\"https://sigap.depok.go.id:9000/\"")
@@ -71,7 +71,7 @@ android {
         dev {
             dimension "default"
             versionNameSuffix "-Dev"
-            buildConfigField("String", "BASE_URL", "\"http://182.23.86.31\"")
+            buildConfigField("String", "BASE_URL", "\"http://103.113.31.29\"")
             buildConfigField("String", "PATH_API", "\"/dsw/index.php/api/\"")
             buildConfigField("String", "PRAY_TIME_URL", "\"https://time.siswadi.com\"")
             buildConfigField("String", "SIGAP_API", "\"https://sigap.depok.go.id:9000/\"")

@@ -46,7 +46,8 @@ class LoginPresenter(private val userRepository: UserRepository,
                             .with(schedulerProvider)
                             .subscribe(
                                     { loginResponse -> handleLoginResponse(loginResponse) },
-                                    { handleLoginError() }
+                                    { handleLoginError()}
+
                             )
                 } else {
                     view?.showAlert(R.string.all_errorconnection)
@@ -69,7 +70,7 @@ class LoginPresenter(private val userRepository: UserRepository,
         view?.clearError()
         if (email.isEmpty()) {
             status = false
-           view?.showErrorEmail(R.string.all_fieldrequired)
+            view?.showErrorEmail(R.string.all_fieldrequired)
         } else if (!email.isValidEmailAddress()) {
             status = false
             view?.showErrorEmail(R.string.all_errorinvalidemail)
@@ -87,8 +88,6 @@ class LoginPresenter(private val userRepository: UserRepository,
         view?.hideLoading()
         if(loginResponse.status) {
             // log successful login
-
-
             userRepository.saveUser(loginResponse.user)
             analyticsManager.logSuccessfulLogin()
             view?.showToast(R.string.login_loginsuccess)

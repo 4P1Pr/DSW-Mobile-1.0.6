@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="id.depok.depoksinglewindow.ui.pdam.registerpelangganlamadanbaru.RegisterPelangganLamadanBaruActivity">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbarlayout_regpdam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_regpdam"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <View
+            android:id="@+id/view_regpdam_pelangganlama"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="@color/softRed"
+            app:layout_constraintTop_toBottomOf="@+id/appbarlayout_regpdam"/>
+
+        <View
+            android:id="@+id/view_regpdam_pelangganlamaoverlay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintTop_toBottomOf="@+id/appbarlayout_regpdam"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <ImageView
+            android:id="@+id/imageview_regpdam_pelangganlamaicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_linewhite_bphtb"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toStartOf="@+id/view_regpdam_pelangganlama"
+            app:layout_constraintTop_toTopOf="@+id/view_regpdam_pelangganlama"
+            app:layout_constraintBottom_toBottomOf="@+id/view_regpdam_pelangganlama"/>
+
+        <TextView
+            android:id="@+id/textview_regpdam_pelangganlamatitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/registerpdam_pelangganlama"
+            style="@style/MenuTitle"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toEndOf="@+id/imageview_regpdam_pelangganlamaicon"
+            app:layout_constraintTop_toTopOf="@+id/view_regpdam_pelangganlama"
+            app:layout_constraintBottom_toBottomOf="@+id/view_regpdam_pelangganlama"/>
+
+        <View
+            android:id="@+id/view_regpdam_pelangganbaru"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="@color/brightGreen"
+            app:layout_constraintTop_toBottomOf="@+id/view_regpdam_pelangganlama"/>
+
+        <View
+            android:id="@+id/view_regpdam_pelangganbaruoverlay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintTop_toBottomOf="@+id/view_regpdam_pelangganlama"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <ImageView
+            android:id="@+id/imageview_regpdam_pelangganbaruicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_linewhite_bphtb"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toStartOf="@+id/view_regpdam_pelangganbaru"
+            app:layout_constraintTop_toTopOf="@+id/view_regpdam_pelangganbaru"
+            app:layout_constraintBottom_toBottomOf="@+id/view_regpdam_pelangganbaru"/>
+
+        <TextView
+            android:id="@+id/textview_regpdam_pelangganbarutitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/registerpdam_pelangganbaru"
+            style="@style/MenuTitle"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toEndOf="@+id/imageview_regpdam_pelangganbaruicon"
+            app:layout_constraintTop_toTopOf="@+id/view_regpdam_pelangganbaru"
+            app:layout_constraintBottom_toBottomOf="@+id/view_regpdam_pelangganbaru"/>
+
+</android.support.constraint.ConstraintLayout>
+</layout>

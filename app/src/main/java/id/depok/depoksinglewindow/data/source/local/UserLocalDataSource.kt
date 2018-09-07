@@ -3,6 +3,7 @@ package id.depok.depoksinglewindow.data.source.local
 import android.content.Context
 import com.orhanobut.hawk.Hawk
 import id.depok.depoksinglewindow.data.User
+import id.depok.depoksinglewindow.data.UserSigap
 import id.depok.depoksinglewindow.data.source.UserDataSource
 
 /**
@@ -12,6 +13,13 @@ import id.depok.depoksinglewindow.data.source.UserDataSource
 const val PREF_KEY_USER = "PREF_KEY_USER"
 
 class UserLocalDataSource(val context: Context) : UserDataSource{
+    override fun getUserSigap(): UserSigap? {
+        return Hawk.get<UserSigap>(PREF_KEY_USER)
+    }
+
+    override fun saveUserSigap(userSigap: UserSigap) {
+        Hawk.put(PREF_KEY_USER, userSigap)
+    }
 
     override fun saveUser(user: User) {
         Hawk.put(PREF_KEY_USER, user)

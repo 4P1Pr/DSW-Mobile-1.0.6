@@ -12,6 +12,8 @@ interface BphtbContract {
         fun showCheckBphtb()
 
         fun showInfoBphtb()
+
+        fun showInfoPembayaranBphtb()
     }
 
     interface Presenter: MvpContract.BasePresenter<View> {
@@ -19,5 +21,7 @@ interface BphtbContract {
         fun onPressCheckBphtb()
 
         fun onPressInfoBphtb()
+
+        fun onPressInfoPembayaranBphtb()
     }
 }

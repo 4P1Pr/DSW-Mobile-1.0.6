@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="id.depok.depoksinglewindow.ui.pembayaranpdam.PembayaranPdamActivity">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbarlayout_pembayaran_pdam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_pembayaran_pdam"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <View
+            android:id="@+id/view_pdam_bni"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="@color/softRed"
+            app:layout_constraintTop_toBottomOf="@+id/appbarlayout_pembayaran_pdam"/>
+
+        <View
+            android:id="@+id/view_pdam_bnioverlay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintTop_toBottomOf="@+id/appbarlayout_pembayaran_pdam"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <ImageView
+            android:id="@+id/imageview_pdam_bniicon"
+            android:layout_width="23dp"
+            android:layout_height="35dp"
+            android:src="@drawable/white_bni"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toStartOf="@+id/view_pdam_bni"
+            app:layout_constraintTop_toTopOf="@+id/view_pdam_bni"
+            app:layout_constraintBottom_toBottomOf="@+id/view_pdam_bni"/>
+
+        <TextView
+            android:id="@+id/textview_pdam_bnititle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bni"
+            style="@style/MenuTitle"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toEndOf="@+id/imageview_pdam_bniicon"
+            app:layout_constraintTop_toTopOf="@+id/view_pdam_bni"
+            app:layout_constraintBottom_toBottomOf="@+id/view_pdam_bni"/>
+
+        <View
+            android:id="@+id/view_pdam_mandiri"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="@color/brightGreen"
+            app:layout_constraintTop_toBottomOf="@+id/view_pdam_bni"/>
+
+        <View
+            android:id="@+id/view_pdam_mandirioverlay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintTop_toBottomOf="@+id/view_pdam_bni"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <ImageView
+            android:id="@+id/imageview_pdam_mandiriicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/white_mandiri"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toStartOf="@+id/view_pdam_mandiri"
+            app:layout_constraintTop_toTopOf="@+id/view_pdam_mandiri"
+            app:layout_constraintBottom_toBottomOf="@+id/view_pdam_mandiri"/>
+
+        <TextView
+            android:id="@+id/textview_pdam_mandirititle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mandiri"
+            style="@style/MenuTitle"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toEndOf="@+id/imageview_pdam_mandiriicon"
+            app:layout_constraintTop_toTopOf="@+id/view_pdam_mandiri"
+            app:layout_constraintBottom_toBottomOf="@+id/view_pdam_mandiri"/>
+
+        <View
+            android:id="@+id/view_pdam_bca"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="@color/darkGreen"
+            app:layout_constraintTop_toBottomOf="@+id/view_pdam_mandiri"/>
+
+        <View
+            android:id="@+id/view_pdam_bcaoverlay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintTop_toBottomOf="@+id/view_pdam_mandiri"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <ImageView
+            android:id="@+id/imageview_pdam_bcaicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bca"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toStartOf="@+id/view_pdam_bca"
+            app:layout_constraintTop_toTopOf="@+id/view_pdam_bca"
+            app:layout_constraintBottom_toBottomOf="@+id/view_pdam_bca"/>
+
+        <TextView
+            android:id="@+id/textview_pdam_bcatitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bca"
+            style="@style/MenuTitle"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toEndOf="@+id/imageview_pdam_bcaicon"
+            app:layout_constraintTop_toTopOf="@+id/view_pdam_bca"
+            app:layout_constraintBottom_toBottomOf="@+id/view_pdam_bca"/>
+
+        <View
+            android:id="@+id/view_pdam_ppob"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="@color/orange"
+            app:layout_constraintTop_toBottomOf="@+id/view_pdam_bca"/>
+
+        <View
+            android:id="@+id/view_pdam_ppoboverlay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintTop_toBottomOf="@+id/view_pdam_bca"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <ImageView
+            android:id="@+id/imageview_pdam_ppobicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ppob"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toStartOf="@+id/view_pdam_ppob"
+            app:layout_constraintTop_toTopOf="@+id/view_pdam_ppob"
+            app:layout_constraintBottom_toBottomOf="@+id/view_pdam_ppob"/>
+
+        <TextView
+            android:id="@+id/textview_pdam_ppobtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ppobdanbanklain"
+            style="@style/MenuTitle"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toEndOf="@+id/imageview_pdam_ppobicon"
+            app:layout_constraintTop_toTopOf="@+id/view_pdam_ppob"
+            app:layout_constraintBottom_toBottomOf="@+id/view_pdam_ppob"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>
+

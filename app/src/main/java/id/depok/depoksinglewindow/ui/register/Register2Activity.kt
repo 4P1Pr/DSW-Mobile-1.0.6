@@ -180,6 +180,7 @@ class Register2Activity : BaseActivity<Register2Contract.Presenter>(), Register2
             buttonRegisterRegisterbutton.setOnClickListener {
                 presenter.onPressRegister(RegisterForm(
                         "",
+                        "",
                         0,
                         "",
                         "",

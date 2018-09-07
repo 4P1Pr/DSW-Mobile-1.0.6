@@ -12,6 +12,10 @@ class AuthRepository(private val authDataSource: AuthDataSource) : AuthDataSourc
         return authDataSource.login(loginRequest)
     }
 
+    override fun loginSigap(loginSigapRequest: LoginSigapRequest): Single<LoginSigapResponse> {
+        return authDataSource.loginSigap(loginSigapRequest)
+    }
+
     override fun register(registerRequest: RegisterRequest): Single<RegisterResponse> {
         return authDataSource.register(registerRequest)
     }

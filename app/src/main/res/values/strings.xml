@@ -8,10 +8,12 @@
     <string name="all_confirm">Konfirmasi</string>
     <string name="all_registration">Registrasi</string>
     <string name="all_fullname">Nama Lengkap</string>
+        <string name="all_nickname">Nama Pendek</string>
     <string name="all_gender">Jenis Kelamin</string>
     <string name="all_phonenumber">No Handphone</string>
     <string name="all_depokresidences">Penduduk Depok</string>
     <string name="all_notdepokresidences">Bukan Penduduk Depok</string>
+    <string name="all_nik">NIK</string>
     <string name="all_address">Alamat</string>
     <string name="all_province">Provinsi</string>
     <string name="all_kabupaten">Kabupaten</string>
@@ -45,7 +47,7 @@
     <string name="all_menuInfoKemacetan">Lalu Lintas</string>
     <string name="all_menuCuacaDepok">Cuaca</string>
     <string name="all_menuLowonganKerja">Loker</string>
-    <string name="all_menuPLN">PLN</string>
+    <string name="all_menuPLNdanPDAM">PDAM &amp; PLN</string>
 
 
     <string name="all_inputnomorpajak">Masukkan nomor pajak Anda</string>
@@ -89,7 +91,6 @@
     <string-array name="aspiration_categories">
         <item>Pilih Kategori</item>
         <item>Permintaan Informasi</item>
-        <item>Pengaduan</item>
         <item>Izin Usaha</item>
         <item>Kebersihan</item>
         <item>Jalan</item>
@@ -149,7 +150,9 @@
 
     <!--Cek PBB-->
     <string name="cekpbb_tagihanpbb">Lihat PBB Anda</string>
-    <string name="cekpbb_informasipbb">Tentang PBB</string>
+    <string name="cekpbb_informasipbb">Info PBB</string>
+        <string name="cekpbb_infopembayaranpbb">Info Pembayaran PBB</string>
+
 
     <!--Tagihan PBB-->
     <string name="tagihanpbb_cekpbbnow">Cek PBB Anda sekarang!</string>
@@ -161,12 +164,17 @@
     <string name="cekbphtb_info1">-Melakukan cek nilai BPHTB</string>
     <string name="cekbphtb_info2">-Melihat riwayat status pembayaran BPHTB</string>
     <string name="cekbphtb_cekbphtb">Lihat BPHTB Anda</string>
-    <string name="cekbphtb_infobphtb">Tentang BPHTB</string>
+    <string name="cekbphtb_infobphtb">Info BPHTB</string>
+    <string name="cekbphtb_infopembayaranbphtb">Info Pembayaran BPHTB</string>
 
     <!--Layanan Perizinan-->
     <string name="layananperizinan_lacakperizinan">Lihat Status Perizinan Anda</string>
-    <string name="layananperizinan_informasiperizinan">Tentang Perizinan</string>
+    <string name="layananperizinan_informasiperizinan">Info Perizinan</string>
     <string name="layananperizinan_perizinanonline">Perizinan Online</string>
+
+    <!--Layanan Call Center-->
+        <string name="layanancallcenter_contactcenterdepok">Contact Center Depok</string>
+        <string name="layanancallcenter_contactopd">Info Kontak OPD</string>
 
     <!--Lacak Perizinan-->
     <string name="lacakperizinan_lacakperizinan">Lacak perizinan Anda</string>
@@ -177,18 +185,20 @@
     <string name="layanankesehatan_newpatien">Pasien Baru</string>
     <string name="layanankesehatan_oldpatien">Pasien Lama</string>
     <string name="layanankesehatan_registerqueue">Registrasi Puskesmas</string>
-    <string name="layanankesehatan_healthcareserviceinformation">Tentang Kesehatan</string>
+    <string name="layanankesehatan_healthcareserviceinformation">Info Kesehatan</string>
+        <string name="layanankesehatan_healtnews">Berita Kesehatan</string>
+
 
     <!--Layanan Pendidikan-->
     <string name="layananpendidikan_schoolregister">Data Sekolah Depok</string>
     <string name="layananpendidikan_passinggrade">Lihat Passing Grade</string>
-    <string name="layananpendidikan_schoolinformation">Seputar Pendidikan</string>
+    <string name="layananpendidikan_schoolinformation">Info Pendidikan</string>
     <string name="layananpendidikan_ppdb">Informasi PPDB</string>
     <string name="layananpendidikan_schoolcalendar">Kalender Pendidikan</string>
 
     <!--Layanan Zakat-->
     <string name="layananzakat_pembayaranzakat">Layanan Pembayaran Zakat</string>
-    <string name="layananzakat_infopembayaranzakat">Tentang Zakat</string>
+    <string name="layananzakat_infopembayaranzakat">Info Zakat</string>
 
     <!--Peta Depok-->
     <string name="peta_depok">Peta Depok</string>
@@ -196,9 +206,30 @@
     <!--RSS Depok-->
     <string name="rss_depok">Berita Seputar Depok</string>
 
-    <!--Layanan PLN-->
-    <string name="pembayaranpln">Pembayaran PLN</string>
-    <string name="infopln">Cek Informasi PLN</string>
+    <!--Layanan PLN dan PDAM-->
+    <string name="pembayaranpln">Cek Pembayaran PLN</string>
+    <string name="infopln">Informasi PLN</string>
+        <string name="pln">PLN</string>
+    <string name="infopdam">Info Layanan PDAM</string>
+        <string name="registerpdam">Registrasi PDAM</string>
+        <string name="registerpdam_pelangganlama">Registrasi Pelanggan Lama</string>
+        <string name="registerpdam_pelangganbaru">Registrasi Pelanggan Baru</string>
+        <string name="pdam">PDAM</string>
+        <string name="jaringanlayananpdam">Jaringan Layanan PDAM</string>
+        <string name="tagihanpdam">Cek Tagihan PDAM</string>
+        <string name="infopembayaran">Info Pembayaran</string>
+        <string name="simulasi">Simulasi Tagihan</string>
+        <string name="bni">BNI</string>
+        <string name="mandiri">Mandiri</string>
+        <string name="bca">BCA</string>
+        <string name="ppobdanbanklain">PPOB &amp; Bank Lainnya</string>
+        <string name="kelompoktarif">Kelompok Tarif</string>
+        <string name="tipshemat">Tips Hemat Air</string>
+        <string name="hakdankewajiban">Hak &amp; Kewajiban Pelanggan</string>
+        <string name="keluhannonpelanggan">Keluhan Non Pelanggan</string>
+        <string name="keluhanpelanggan">Keluhan Pelanggan</string>
+
+
 
     <!--Old Patient-->
     <string name="oldpatient_queueregister">Pendaftaran Antrian</string>

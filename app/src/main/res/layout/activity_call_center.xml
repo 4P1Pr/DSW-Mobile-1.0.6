@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="id.depok.depoksinglewindow.ui.callcenter.CallCenterMenuActivity">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbarlayout_callcenter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_callcenter"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <View
+            android:id="@+id/view_callcenter_calldepok"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="@color/softRed"
+            app:layout_constraintTop_toBottomOf="@+id/appbarlayout_callcenter"/>
+
+        <View
+            android:id="@+id/view_callcenter_calldepokoverlay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintTop_toBottomOf="@+id/appbarlayout_callcenter"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <ImageView
+            android:id="@+id/imageview_callcenter_calldepokicon"
+            android:layout_width="23dp"
+            android:layout_height="35dp"
+            android:src="@drawable/icon_linewhite_contact"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toStartOf="@+id/view_callcenter_calldepok"
+            app:layout_constraintTop_toTopOf="@+id/view_callcenter_calldepok"
+            app:layout_constraintBottom_toBottomOf="@+id/view_callcenter_calldepok"/>
+
+        <TextView
+            android:id="@+id/textview_callcenter_calldepoktitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/layanancallcenter_contactcenterdepok"
+            style="@style/MenuTitle"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toEndOf="@+id/imageview_callcenter_calldepokicon"
+            app:layout_constraintTop_toTopOf="@+id/view_callcenter_calldepok"
+            app:layout_constraintBottom_toBottomOf="@+id/view_callcenter_calldepok"/>
+
+        <View
+            android:id="@+id/view_callcenter_callopd"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="@color/brightGreen"
+            app:layout_constraintTop_toBottomOf="@+id/view_callcenter_calldepok"/>
+
+        <View
+            android:id="@+id/view_callcenter_callopdoverlay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintTop_toBottomOf="@+id/view_callcenter_calldepok"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <ImageView
+            android:id="@+id/imageview_callcenter_callopdicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/contact_opd_white"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toStartOf="@+id/view_callcenter_callopd"
+            app:layout_constraintTop_toTopOf="@+id/view_callcenter_callopd"
+            app:layout_constraintBottom_toBottomOf="@+id/view_callcenter_callopd"/>
+
+        <TextView
+            android:id="@+id/textview_callcenter_callopdtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/layanancallcenter_contactopd"
+            style="@style/MenuTitle"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toEndOf="@+id/imageview_callcenter_callopdicon"
+            app:layout_constraintTop_toTopOf="@+id/view_callcenter_callopd"
+            app:layout_constraintBottom_toBottomOf="@+id/view_callcenter_callopd"/>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

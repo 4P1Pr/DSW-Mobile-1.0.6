@@ -3,6 +3,7 @@ package id.depok.depoksinglewindow.ui.layanankesehatan
 import android.content.Intent
 import android.databinding.DataBindingUtil
 import android.os.Bundle
+import android.widget.Toast
 import id.depok.depoksinglewindow.R
 import id.depok.depoksinglewindow.data.LayananKesehatanMenuType
 import id.depok.depoksinglewindow.data.api.ApiSettings
@@ -27,16 +28,20 @@ class HealthCareServiceActivity : BaseActivity<HealthCareServiceContract.Present
 
 
     override fun showHealthCareServiceRegistration() {
-        val intent = Intent(this, WebPageActivity::class.java)
-        intent.putExtra(Arguments.ARG_TITLE, getString(R.string.layanankesehatan_registerqueue))
-        intent.putExtra(Arguments.ARG_URL, ApiSettings.URL_REGISTRASI_LAYANAN_KESEHATAN)
-        startActivity(intent)
+        Toast.makeText(this, "Coming Soon", Toast.LENGTH_SHORT).show()
     }
 
     override fun showHealthCareServiceInformation() {
         val intent = Intent(this, WebPageActivity::class.java)
         intent.putExtra(Arguments.ARG_TITLE, getString(R.string.layanankesehatan_healthcareserviceinformation))
         intent.putExtra(Arguments.ARG_URL, ApiSettings.URL_INFORMASI_LAYANAN_KESEHATAN)
+        startActivity(intent)
+    }
+
+    override fun showHealthCareServiceHealthNews() {
+        val intent = Intent(this, WebPageActivity::class.java)
+        intent.putExtra(Arguments.ARG_TITLE, getString(R.string.layanankesehatan_healtnews))
+        intent.putExtra(Arguments.ARG_URL, ApiSettings.URL_BERITA_KESEHATAN)
         startActivity(intent)
     }
 
@@ -52,6 +57,10 @@ class HealthCareServiceActivity : BaseActivity<HealthCareServiceContract.Present
 
             viewLayanankesehatanHealthcareserviceinfooverlay.setOnClickListener {
                 presenter.onMenuSelected(LayananKesehatanMenuType.HEALTHCARE_SERVICE_INFORMATION)
+            }
+
+            viewLayanankesehatanHealthcareservicehealthnewsoverlay.setOnClickListener {
+                presenter.onMenuSelected(LayananKesehatanMenuType.HEALTHCARE_SERVICE_HEALTH_NEWS)
             }
         }
 

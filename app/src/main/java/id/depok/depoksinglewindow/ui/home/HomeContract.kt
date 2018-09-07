@@ -53,7 +53,9 @@ interface HomeContract {
 
         fun showInfoLowonganKerja()
 
-        fun showPLN()
+        fun showPLNdanPDAM()
+
+        fun showPengaduan()
 
     }
 

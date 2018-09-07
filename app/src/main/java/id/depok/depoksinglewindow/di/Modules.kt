@@ -12,10 +12,13 @@ import id.depok.depoksinglewindow.data.source.local.UserLocalDataSource
 import id.depok.depoksinglewindow.data.source.remote.*
 import id.depok.depoksinglewindow.manager.AnalyticsManager
 import id.depok.depoksinglewindow.manager.NetManager
+import id.depok.depoksinglewindow.ui.aspiration.*
 import id.depok.depoksinglewindow.ui.bphtb.BphtbActivity
 import id.depok.depoksinglewindow.ui.bphtb.BphtbContract
 import id.depok.depoksinglewindow.ui.bphtb.BphtbPresenter
-import id.depok.depoksinglewindow.ui.complaint.*
+import id.depok.depoksinglewindow.ui.callcenter.CallCenterMenuActivity
+import id.depok.depoksinglewindow.ui.callcenter.CallCenterMenuContract
+import id.depok.depoksinglewindow.ui.callcenter.CallCenterMenuPresenter
 import id.depok.depoksinglewindow.ui.editpassword.EditPasswordActivity
 import id.depok.depoksinglewindow.ui.editpassword.EditPasswordContract
 import id.depok.depoksinglewindow.ui.editpassword.EditPasswordPresenter
@@ -26,6 +29,9 @@ import id.depok.depoksinglewindow.ui.home.HomeActivity
 import id.depok.depoksinglewindow.ui.home.HomeContract
 import id.depok.depoksinglewindow.ui.home.HomePresenter
 import id.depok.depoksinglewindow.ui.layanankesehatan.*
+import id.depok.depoksinglewindow.ui.layananpdam.LayananPdamActivity
+import id.depok.depoksinglewindow.ui.layananpdam.LayananPdamContract
+import id.depok.depoksinglewindow.ui.layananpdam.LayananPdamPresenter
 import id.depok.depoksinglewindow.ui.layananpendidikan.LayananPendidikanActivity
 import id.depok.depoksinglewindow.ui.layananpendidikan.LayananPendidikanContract
 import id.depok.depoksinglewindow.ui.layananpendidikan.LayananPendidikanPresenter
@@ -39,9 +45,18 @@ import id.depok.depoksinglewindow.ui.onboarding.OnBoardingPresenter
 import id.depok.depoksinglewindow.ui.pbb.PbbActivity
 import id.depok.depoksinglewindow.ui.pbb.PbbContract
 import id.depok.depoksinglewindow.ui.pbb.PbbPresenter
-import id.depok.depoksinglewindow.ui.pln.PlnActivity
-import id.depok.depoksinglewindow.ui.pln.PlnContract
-import id.depok.depoksinglewindow.ui.pln.PlnPresenter
+import id.depok.depoksinglewindow.ui.pdam.PdamActivity
+import id.depok.depoksinglewindow.ui.pdam.PdamContract
+import id.depok.depoksinglewindow.ui.pdam.PdamPresenter
+import id.depok.depoksinglewindow.ui.pdam.registerpelangganlamadanbaru.RegisterPelangganLamadanBaruActivity
+import id.depok.depoksinglewindow.ui.pdam.registerpelangganlamadanbaru.RegisterPelangganLamadanBaruInterface
+import id.depok.depoksinglewindow.ui.pdam.registerpelangganlamadanbaru.RegisterPelangganLamadanBaruPresenter
+import id.depok.depoksinglewindow.ui.pdamdanpln.PdamdanPlnActivity
+import id.depok.depoksinglewindow.ui.pdamdanpln.PdamdanPlnContract
+import id.depok.depoksinglewindow.ui.pdamdanpln.PdamdanPlnPresenter
+import id.depok.depoksinglewindow.ui.pembayaranpdam.PembayaranPdamActivity
+import id.depok.depoksinglewindow.ui.pembayaranpdam.PembayaranPdamContract
+import id.depok.depoksinglewindow.ui.pembayaranpdam.PembayaranPdamPresenter
 import id.depok.depoksinglewindow.ui.profile.ProfileActivity
 import id.depok.depoksinglewindow.ui.profile.ProfileContract
 import id.depok.depoksinglewindow.ui.profile.ProfilePresenter
@@ -55,11 +70,11 @@ import id.depok.depoksinglewindow.ui.splash.SplashPresenter
 import id.depok.depoksinglewindow.ui.zakat.ZakatActivity
 import id.depok.depoksinglewindow.ui.zakat.ZakatContract
 import id.depok.depoksinglewindow.ui.zakat.ZakatPresenter
+import id.depok.depoksinglewindow.util.rx.ApplicationSchedulerProvider
+import id.depok.depoksinglewindow.util.rx.SchedulerProvider
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.dsl.module.applicationContext
-import id.depok.depoksinglewindow.util.rx.ApplicationSchedulerProvider
-import id.depok.depoksinglewindow.util.rx.SchedulerProvider
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
@@ -86,6 +101,9 @@ val appModule = applicationContext {
 
         factory { LoginActivity() }
         factory { LoginPresenter(get(), get(), get(), get(), get()) as LoginContract.Presenter }
+
+        /*factory { SigapLoginActivity() }
+        factory { SigapLoginPresenter(get(), get(), get(), get(), get()) as SigapLoginContract.Presenter }*/
 
         factory { ForgotPasswordActivity() }
         factory {
@@ -138,24 +156,50 @@ val appModule = applicationContext {
             ZakatPresenter() as ZakatContract.Presenter
         }
 
-        factory { PlnActivity() }
+        factory { PdamdanPlnActivity() }
         factory {
-            PlnPresenter() as PlnContract.Presenter
+            PdamdanPlnPresenter() as PdamdanPlnContract.Presenter
         }
 
-        factory { OldPatientQueuePageActivity() }
+        factory { PdamActivity() }
+        factory {
+            PdamPresenter() as PdamContract.Presenter
+        }
+
+        factory { PembayaranPdamActivity() }
+        factory {
+            PembayaranPdamPresenter() as PembayaranPdamContract.Presenter
+        }
+
+        factory { LayananPdamActivity() }
+        factory {
+            LayananPdamPresenter() as LayananPdamContract.Presenter
+        }
+
+        factory { CallCenterMenuActivity()}
+        factory {
+            CallCenterMenuPresenter() as CallCenterMenuContract.Presenter
+        }
+
+        factory { RegisterPelangganLamadanBaruActivity()}
+        factory {
+            RegisterPelangganLamadanBaruPresenter() as RegisterPelangganLamadanBaruInterface.Presenter
+        }
+
+
+    factory { OldPatientQueuePageActivity() }
         factory {
             OldPatientQueuePagePresenter() as OldPatientQueuePageContract.Presenter
         }
 
-        provide { ComplaintPageActivity() }
+        provide { AspirationPageActivity() }
         factory {
-            ComplaintPagePresenter(get(), get(), get(), get(), get(), get()) as ComplaintPageContract.Presenter
+            AspirationPagePresenter(get(), get(), get(), get(), get(), get()) as AspirationPageContract.Presenter
         }
 
-        provide { ComplaintListActivity() }
+        provide { AspirationListActivity() }
         factory {
-            ComplaintListPresenter(get(), get(), get(), get()) as ComplaintListContract.Presenter
+            AspirationListPresenter(get(), get(), get(), get()) as AspirationListContract.Presenter
         }
 
         factory { SettingsActivity() }

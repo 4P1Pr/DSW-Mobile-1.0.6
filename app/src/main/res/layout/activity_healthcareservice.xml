@@ -30,7 +30,7 @@
             android:id="@+id/view_layanankesehatan_healthcareserviceregis"
             android:layout_width="match_parent"
             android:layout_height="@dimen/height_menu"
-            android:background="@color/softRed"
+            android:background="@color/orange"
             app:layout_constraintTop_toBottomOf="@+id/appbarlayout_layanankesehatan"/>
 
         <View
@@ -67,7 +67,7 @@
             android:id="@+id/view_layanankesehatan_healthcareserviceinfo"
             android:layout_width="match_parent"
             android:layout_height="@dimen/height_menu"
-            android:background="@color/darkGreen"
+            android:background="@color/softRed"
             app:layout_constraintTop_toBottomOf="@+id/view_layanankesehatan_healthcareserviceregis"/>
 
         <View
@@ -83,7 +83,7 @@
             android:id="@+id/imageview_layanankesehatan_healthcareserviceicon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/icon_linewhite_info"
+            android:src="@drawable/info_kesehatan_white"
             android:layout_marginStart="@dimen/margin_icon_leftmargin"
             app:layout_constraintStart_toStartOf="@+id/view_layanankesehatan_healthcareserviceinfo"
             app:layout_constraintTop_toTopOf="@+id/view_layanankesehatan_healthcareserviceinfo"
@@ -99,6 +99,43 @@
             app:layout_constraintStart_toEndOf="@+id/imageview_layanankesehatan_healthcareserviceicon"
             app:layout_constraintTop_toTopOf="@+id/view_layanankesehatan_healthcareserviceinfo"
             app:layout_constraintBottom_toBottomOf="@+id/view_layanankesehatan_healthcareserviceinfo"/>
+
+        <View
+            android:id="@+id/view_layanankesehatan_healthcareservicehealthnews"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="@color/darkGreen"
+            app:layout_constraintTop_toBottomOf="@+id/view_layanankesehatan_healthcareserviceinfo"/>
+
+        <View
+            android:id="@+id/view_layanankesehatan_healthcareservicehealthnewsoverlay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintTop_toBottomOf="@+id/view_layanankesehatan_healthcareserviceinfo"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <ImageView
+            android:id="@+id/imageview_layanankesehatan_healtnewsicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/berita_kesehatan_white"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toStartOf="@+id/view_layanankesehatan_healthcareservicehealthnews"
+            app:layout_constraintTop_toTopOf="@+id/view_layanankesehatan_healthcareservicehealthnews"
+            app:layout_constraintBottom_toBottomOf="@+id/view_layanankesehatan_healthcareservicehealthnews"/>
+
+        <TextView
+            android:id="@+id/textview_layanankesehatan_healthnewstitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/layanankesehatan_healtnews"
+            style="@style/MenuTitle"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toEndOf="@+id/imageview_layanankesehatan_healtnewsicon"
+            app:layout_constraintTop_toTopOf="@+id/view_layanankesehatan_healthcareservicehealthnews"
+            app:layout_constraintBottom_toBottomOf="@+id/view_layanankesehatan_healthcareservicehealthnews"/>
 
     </android.support.constraint.ConstraintLayout>
 

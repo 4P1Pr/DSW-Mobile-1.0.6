@@ -20,4 +20,8 @@ class BphtbPresenter: GenericPresenter<BphtbContract.View>(), BphtbContract.Pres
     override fun onPressInfoBphtb() {
         view?.showInfoBphtb()
     }
+
+    override fun onPressInfoPembayaranBphtb() {
+        view?.showInfoPembayaranBphtb()
+    }
 }

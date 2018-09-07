@@ -17,7 +17,7 @@ data class ComplainQuestionCategoriesResponse(
     @Expose
     val data: List<ComplaintQuestionCategory>,
 
-    @SerializedName("nessage")
+    @SerializedName("message")
     @Expose
     val message: String
 )

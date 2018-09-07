@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="id.depok.depoksinglewindow.ui.layananpdam.LayananPdamActivity">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbarlayout_pdam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_pdam"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <View
+            android:id="@+id/view_pdam_kelompok_tarif"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="@color/softRed"
+            app:layout_constraintTop_toBottomOf="@+id/appbarlayout_pdam"/>
+
+        <View
+            android:id="@+id/view_pdam_kelompok_tarifoverlay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintTop_toBottomOf="@+id/appbarlayout_pdam"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <ImageView
+            android:id="@+id/imageview_pdam_kelompok_tarificon"
+            android:layout_width="23dp"
+            android:layout_height="35dp"
+            android:src="@drawable/kelompok_white"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toStartOf="@+id/view_pdam_kelompok_tarif"
+            app:layout_constraintTop_toTopOf="@+id/view_pdam_kelompok_tarif"
+            app:layout_constraintBottom_toBottomOf="@+id/view_pdam_kelompok_tarif"/>
+
+        <TextView
+            android:id="@+id/textview_pdam_kelompok_tariftitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kelompoktarif"
+            style="@style/MenuTitle"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toEndOf="@+id/imageview_pdam_kelompok_tarificon"
+            app:layout_constraintTop_toTopOf="@+id/view_pdam_kelompok_tarif"
+            app:layout_constraintBottom_toBottomOf="@+id/view_pdam_kelompok_tarif"/>
+
+        <View
+            android:id="@+id/view_pdam_tips_hemat"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="@color/brightGreen"
+            app:layout_constraintTop_toBottomOf="@+id/view_pdam_kelompok_tarif"/>
+
+        <View
+            android:id="@+id/view_pdam_tips_hematoverlay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintTop_toBottomOf="@+id/view_pdam_kelompok_tarif"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <ImageView
+            android:id="@+id/imageview_pdam_tips_hematicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/tips_white"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toStartOf="@+id/view_pdam_tips_hemat"
+            app:layout_constraintTop_toTopOf="@+id/view_pdam_tips_hemat"
+            app:layout_constraintBottom_toBottomOf="@+id/view_pdam_tips_hemat"/>
+
+        <TextView
+            android:id="@+id/textview_pdam_tips_hemattitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tipshemat"
+            style="@style/MenuTitle"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toEndOf="@+id/imageview_pdam_tips_hematicon"
+            app:layout_constraintTop_toTopOf="@+id/view_pdam_tips_hemat"
+            app:layout_constraintBottom_toBottomOf="@+id/view_pdam_tips_hemat"/>
+
+        <View
+            android:id="@+id/view_pdam_hak_kewajiban"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="@color/darkGreen"
+            app:layout_constraintTop_toBottomOf="@+id/view_pdam_tips_hemat"/>
+
+        <View
+            android:id="@+id/view_pdam_hak_kewajibanoverlay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintTop_toBottomOf="@+id/view_pdam_tips_hemat"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <ImageView
+            android:id="@+id/imageview_pdam_hak_kewajibanicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/hak_kewajiban_white"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toStartOf="@+id/view_pdam_hak_kewajiban"
+            app:layout_constraintTop_toTopOf="@+id/view_pdam_hak_kewajiban"
+            app:layout_constraintBottom_toBottomOf="@+id/view_pdam_hak_kewajiban"/>
+
+        <TextView
+            android:id="@+id/textview_pdam_hak_kewajiban"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hakdankewajiban"
+            style="@style/MenuTitle"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toEndOf="@+id/imageview_pdam_hak_kewajibanicon"
+            app:layout_constraintTop_toTopOf="@+id/view_pdam_hak_kewajiban"
+            app:layout_constraintBottom_toBottomOf="@+id/view_pdam_hak_kewajiban"/>
+
+        <View
+            android:id="@+id/view_pdam_keluhanpelanggan"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="@color/orange"
+            app:layout_constraintTop_toBottomOf="@+id/view_pdam_hak_kewajiban"/>
+
+        <View
+            android:id="@+id/view_pdam_keluhanpelangganoverlay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintTop_toBottomOf="@+id/view_pdam_hak_kewajiban"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <ImageView
+            android:id="@+id/imageview_pdam_keluhanpelangganicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/hak_kewajiban_white"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toStartOf="@+id/view_pdam_keluhanpelanggan"
+            app:layout_constraintTop_toTopOf="@+id/view_pdam_keluhanpelanggan"
+            app:layout_constraintBottom_toBottomOf="@+id/view_pdam_keluhanpelanggan"/>
+
+        <TextView
+            android:id="@+id/textview_pdam_keluhanpelanggan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/keluhanpelanggan"
+            style="@style/MenuTitle"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toEndOf="@+id/imageview_pdam_keluhanpelangganicon"
+            app:layout_constraintTop_toTopOf="@+id/view_pdam_keluhanpelanggan"
+            app:layout_constraintBottom_toBottomOf="@+id/view_pdam_keluhanpelanggan"/>
+
+        <View
+            android:id="@+id/view_pdam_keluhannonpelanggan"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="@color/softRed"
+            app:layout_constraintTop_toBottomOf="@+id/view_pdam_keluhanpelanggan"/>
+
+        <View
+            android:id="@+id/view_pdam_keluhannonpelangganoverlay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintTop_toBottomOf="@+id/view_pdam_keluhanpelanggan"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <ImageView
+            android:id="@+id/imageview_pdam_keluhannonpelangganicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/hak_kewajiban_white"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toStartOf="@+id/view_pdam_keluhannonpelanggan"
+            app:layout_constraintTop_toTopOf="@+id/view_pdam_keluhannonpelanggan"
+            app:layout_constraintBottom_toBottomOf="@+id/view_pdam_keluhannonpelanggan"/>
+
+        <TextView
+            android:id="@+id/textview_pdam_keluhannonpelanggan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/keluhannonpelanggan"
+            style="@style/MenuTitle"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toEndOf="@+id/imageview_pdam_keluhannonpelangganicon"
+            app:layout_constraintTop_toTopOf="@+id/view_pdam_keluhannonpelanggan"
+            app:layout_constraintBottom_toBottomOf="@+id/view_pdam_keluhannonpelanggan"/>
+
+</android.support.constraint.ConstraintLayout>
+</layout>

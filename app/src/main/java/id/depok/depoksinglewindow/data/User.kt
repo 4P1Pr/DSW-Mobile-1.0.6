@@ -19,6 +19,10 @@ data class User (
         val name: String,
         val profilePicture: String,
 
+        @SerializedName("nickname")
+        @Expose
+        val nickname: String,
+
         @SerializedName("address")
         @Expose
         val address: String,

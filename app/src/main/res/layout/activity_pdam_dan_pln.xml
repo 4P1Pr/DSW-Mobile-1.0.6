@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="id.depok.depoksinglewindow.ui.pdamdanpln.PdamdanPlnActivity">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbarlayout_plndanpdam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_plndanpdam"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <View
+            android:id="@+id/view_pdam"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="@color/orange"
+            app:layout_constraintTop_toBottomOf="@+id/appbarlayout_plndanpdam"/>
+
+        <View
+            android:id="@+id/view_pdamoverlay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintTop_toBottomOf="@+id/appbarlayout_plndanpdam"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <ImageView
+            android:id="@+id/imageview_pdamicon"
+            android:layout_width="23dp"
+            android:layout_height="35dp"
+            android:src="@drawable/icon_white_pdam"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toStartOf="@+id/view_pdam"
+            app:layout_constraintTop_toTopOf="@+id/view_pdam"
+            app:layout_constraintBottom_toBottomOf="@+id/view_pdam"/>
+
+        <TextView
+            android:id="@+id/textview_pdamtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pdam"
+            style="@style/MenuTitle"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toEndOf="@+id/imageview_pdamicon"
+            app:layout_constraintTop_toTopOf="@+id/view_pdam"
+            app:layout_constraintBottom_toBottomOf="@+id/view_pdam"/>
+
+        <View
+            android:id="@+id/view_pln"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="@color/darkGreen"
+            app:layout_constraintTop_toBottomOf="@+id/view_pdam"/>
+
+        <View
+            android:id="@+id/view_plnoverlay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintTop_toBottomOf="@+id/view_pdam"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <ImageView
+            android:id="@+id/imageview_plnicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_white_pln"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toStartOf="@+id/view_pln"
+            app:layout_constraintTop_toTopOf="@+id/view_pln"
+            app:layout_constraintBottom_toBottomOf="@+id/view_pln"/>
+
+        <TextView
+            android:id="@+id/textview_plntitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pln"
+            style="@style/MenuTitle"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toEndOf="@+id/imageview_plnicon"
+            app:layout_constraintTop_toTopOf="@+id/view_pln"
+            app:layout_constraintBottom_toBottomOf="@+id/view_pln"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

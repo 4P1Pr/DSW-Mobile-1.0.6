@@ -137,8 +137,8 @@ class Register2Presenter(private val authRepository: AuthRepository,
                         request = authRepository.register(combinedData.createRegisterRequest())
                                 .with(schedulerProvider)
                                 .subscribe(
-                                        { registerResponse -> handleRegisterResponse(registerResponse) },
-                                        { handleRegisterError() }
+                                        { registerResponse -> handleRegisterResponse(registerResponse)},
+                                        { handleRegisterError()}
                                 )
                     }
                 } else {
@@ -181,13 +181,14 @@ class Register2Presenter(private val authRepository: AuthRepository,
     }
 
     private fun handleRegisterResponse(registerResponse: RegisterResponse) {
+        view?.hideLoading()
         if(registerResponse.status) {
             userRepository.saveUser(registerResponse.user)
-            view?.hideLoading()
+            analyticsManager.logSuccessfulRegister()
             view?.showToast(R.string.register_registersuccess)
             view?.showMain()
             // log successful register
-            analyticsManager.logSuccessfulRegister()
+
 
             // login
             /*request?.dispose()
@@ -205,7 +206,6 @@ class Register2Presenter(private val authRepository: AuthRepository,
                 view?.showAlert(R.string.login_loginfailed)
             }*/
         } else {
-            view?.hideLoading()
             view?.showAlert(R.string.register_registerfailed, registerResponse.message)
         }
     }
@@ -285,6 +285,7 @@ class Register2Presenter(private val authRepository: AuthRepository,
     private fun combineFormData(initialFormData: RegisterForm, formData: RegisterForm): RegisterForm
             = RegisterForm(
                 initialFormData.fullName,
+                initialFormData.nickName,
                 initialFormData.gender,
                 initialFormData.email,
                 initialFormData.phoneNumber,

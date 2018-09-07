@@ -14,6 +14,8 @@ interface HealthCareServiceContract {
         fun showHealthCareServiceInformation()
 
         fun showHealthCareServiceRegistration()
+
+        fun showHealthCareServiceHealthNews()
     }
 
     interface Presenter: MvpContract.BasePresenter<View> {

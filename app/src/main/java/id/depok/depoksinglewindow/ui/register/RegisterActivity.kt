@@ -68,6 +68,7 @@ class RegisterActivity : BaseActivity<RegisterContract.Presenter>(), RegisterCon
             buttonRegisterNextbutton.setOnClickListener {
                 presenter.onPressNext(RegisterForm(
                         edittextRegisterFullname.text.toString(),
+                        edittextRegisterNickname.text.toString(),
                         spinnerRegisterGender.selectedItemPosition,
                         edittextRegisterEmail.text.toString(),
                         edittextRegisterPhonenumber.text.toString(),

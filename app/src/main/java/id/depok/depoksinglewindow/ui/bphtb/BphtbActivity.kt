@@ -40,6 +40,13 @@ class BphtbActivity: BaseActivity<BphtbContract.Presenter>(), BphtbContract.View
         startActivity(intent)
     }
 
+    override fun showInfoPembayaranBphtb() {
+        val intent = Intent(this, WebPageActivity::class.java)
+        intent.putExtra(Arguments.ARG_TITLE, getString(R.string.cekbphtb_infopembayaranbphtb))
+        intent.putExtra(Arguments.ARG_URL, ApiSettings.URL_INFO_PEMBAYARAN_BPHTB)
+        startActivity(intent)
+    }
+
     private fun initialize() {
         setSupportActionBar(binding.toolbarBphtb)
 
@@ -48,6 +55,7 @@ class BphtbActivity: BaseActivity<BphtbContract.Presenter>(), BphtbContract.View
 
             viewBphtbCheckbphtboverlay.setOnClickListener { presenter.onPressCheckBphtb() }
             viewBphtbInfobphtboverlay.setOnClickListener { presenter.onPressInfoBphtb() }
+            viewBphtbInfopembayaranbphtboverlay.setOnClickListener { presenter.onPressInfoPembayaranBphtb() }
         }
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)

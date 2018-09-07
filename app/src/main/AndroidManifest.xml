@@ -6,6 +6,11 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -97,12 +102,12 @@
             android:label="@string/layanankesehatan_oldpatien"
             android:screenOrientation="userPortrait" />
         <activity
-            android:name=".ui.complaint.ComplaintPageActivity"
+            android:name=".ui.aspiration.AspirationPageActivity"
             android:label="Buat Pertanyaan dan Aspirasi"
             android:screenOrientation="userPortrait"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".ui.complaint.ComplaintListActivity"
+            android:name=".ui.aspiration.AspirationListActivity"
             android:label="Pertanyaan dan Aspirasi"
             android:screenOrientation="userPortrait"
             android:windowSoftInputMode="stateHidden" />
@@ -133,13 +138,36 @@
             android:label="@string/all_menuLayananPendidikan"
             android:screenOrientation="userPortrait" />
         <activity
+            android:name=".ui.callcenter.CallCenterMenuActivity"
+            android:screenOrientation="userPortrait"
+            android:label="@string/all_menuContactCenter"/>
+        <activity
             android:name=".ui.zakat.ZakatActivity"
             android:label="@string/all_menuLayananZakat"
             android:screenOrientation="userPortrait" />
         <activity
-            android:name=".ui.pln.PlnActivity"
-            android:label="@string/all_menuPLN"
+            android:name=".ui.pdamdanpln.PdamdanPlnActivity"
+            android:label="@string/all_menuPLNdanPDAM"
             android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".ui.pdam.PdamActivity"
+            android:label="@string/pdam"
+            android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".ui.layananpdam.LayananPdamActivity"
+            android:label="@string/infopdam"
+            android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".ui.pembayaranpdam.PembayaranPdamActivity"
+            android:label="@string/infopembayaran"
+            android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".ui.sigap.loginsigap.SigapLoginActivity"
+            android:screenOrientation="userPortrait"/>
+        <activity
+            android:name=".ui.pdam.registerpelangganlamadanbaru.RegisterPelangganLamadanBaruActivity"
+            android:label="@string/registerpdam"
+            android:screenOrientation="userPortrait"/>
     </application>
 
 </manifest>

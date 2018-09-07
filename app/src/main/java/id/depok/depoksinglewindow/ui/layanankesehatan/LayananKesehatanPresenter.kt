@@ -23,6 +23,8 @@ class LayananKesehatanPresenter:
                 view?.showHealthCareServiceInformation()
             (LayananKesehatanMenuType.HEALTHCARE_SERVICE_REGISTRATION) ->
                 view?.showHealthCareServiceRegistration()
+            (LayananKesehatanMenuType.HEALTHCARE_SERVICE_HEALTH_NEWS) ->
+                view?.showHealthCareServiceHealthNews()
             else -> {
             }
         }

@@ -30,7 +30,7 @@
             android:id="@+id/view_cekpbb_tagihanpbb"
             android:layout_width="match_parent"
             android:layout_height="@dimen/height_menu"
-            android:background="@color/orange"
+            android:background="@color/softRed"
             app:layout_constraintTop_toBottomOf="@+id/appbarlayout_cekpbb"/>
 
         <View
@@ -67,7 +67,7 @@
             android:id="@+id/view_cekpbb_informasipbb"
             android:layout_width="match_parent"
             android:layout_height="@dimen/height_menu"
-            android:background="@color/darkGreen"
+            android:background="@color/brightGreen"
             app:layout_constraintTop_toBottomOf="@+id/view_cekpbb_tagihanpbb"/>
 
         <View
@@ -83,7 +83,7 @@
             android:id="@+id/imageview_cekpbb_informasipbbicon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/icon_linewhite_info"
+            android:src="@drawable/info_pbb_white"
             android:layout_marginStart="@dimen/margin_icon_leftmargin"
             app:layout_constraintStart_toStartOf="@+id/view_cekpbb_informasipbb"
             app:layout_constraintTop_toTopOf="@+id/view_cekpbb_informasipbb"
@@ -100,6 +100,42 @@
             app:layout_constraintTop_toTopOf="@+id/view_cekpbb_informasipbb"
             app:layout_constraintBottom_toBottomOf="@+id/view_cekpbb_informasipbb"/>
 
+        <View
+            android:id="@+id/view_cekpbb_infopembayaranpbb"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="@color/darkGreen"
+            app:layout_constraintTop_toBottomOf="@+id/view_cekpbb_informasipbb"/>
+
+        <View
+            android:id="@+id/view_cekpbb_infopembayaranpbboverlay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintTop_toBottomOf="@+id/view_cekpbb_informasipbb"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <ImageView
+            android:id="@+id/imageview_cekpbb_infopembayaranpbbicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pembayaran_pbb_white"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toStartOf="@+id/view_cekpbb_infopembayaranpbb"
+            app:layout_constraintTop_toTopOf="@+id/view_cekpbb_infopembayaranpbb"
+            app:layout_constraintBottom_toBottomOf="@+id/view_cekpbb_infopembayaranpbb"/>
+
+        <TextView
+            android:id="@+id/textview_cekpbb_infopembayaranpbbtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cekpbb_infopembayaranpbb"
+            style="@style/MenuTitle"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toEndOf="@+id/imageview_cekpbb_infopembayaranpbbicon"
+            app:layout_constraintTop_toTopOf="@+id/view_cekpbb_infopembayaranpbb"
+            app:layout_constraintBottom_toBottomOf="@+id/view_cekpbb_infopembayaranpbb"/>
     </android.support.constraint.ConstraintLayout>
 
 </layout>

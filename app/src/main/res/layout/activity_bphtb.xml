@@ -30,7 +30,7 @@
             android:id="@+id/view_bphtb_checkbphtb"
             android:layout_width="match_parent"
             android:layout_height="@dimen/height_menu"
-            android:background="@color/orange"
+            android:background="@color/softRed"
             app:layout_constraintTop_toBottomOf="@+id/appbarlayout_bphtb"/>
 
         <View
@@ -67,7 +67,7 @@
             android:id="@+id/view_bphtb_infobphtb"
             android:layout_width="match_parent"
             android:layout_height="@dimen/height_menu"
-            android:background="@color/darkGreen"
+            android:background="@color/brightGreen"
             app:layout_constraintTop_toBottomOf="@+id/view_bphtb_checkbphtb"/>
 
         <View
@@ -83,7 +83,7 @@
             android:id="@+id/imageview_bphtb_infobphtbicon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/icon_linewhite_info"
+            android:src="@drawable/info_bphtb_white"
             android:layout_marginStart="@dimen/margin_icon_leftmargin"
             app:layout_constraintStart_toStartOf="@+id/view_bphtb_infobphtb"
             app:layout_constraintTop_toTopOf="@+id/view_bphtb_infobphtb"
@@ -99,6 +99,43 @@
             app:layout_constraintStart_toEndOf="@+id/imageview_bphtb_infobphtbicon"
             app:layout_constraintTop_toTopOf="@+id/view_bphtb_infobphtb"
             app:layout_constraintBottom_toBottomOf="@+id/view_bphtb_infobphtb"/>
+
+        <View
+            android:id="@+id/view_bphtb_infopembayaranbphtb"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="@color/darkGreen"
+            app:layout_constraintTop_toBottomOf="@+id/view_bphtb_infobphtb"/>
+
+        <View
+            android:id="@+id/view_bphtb_infopembayaranbphtboverlay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_menu"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintTop_toBottomOf="@+id/view_bphtb_infobphtb"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <ImageView
+            android:id="@+id/imageview_bphtb_infopembayaranbphtbicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pembayaran_bphtb_white"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toStartOf="@+id/view_bphtb_infopembayaranbphtb"
+            app:layout_constraintTop_toTopOf="@+id/view_bphtb_infopembayaranbphtb"
+            app:layout_constraintBottom_toBottomOf="@+id/view_bphtb_infopembayaranbphtb"/>
+
+        <TextView
+            android:id="@+id/textview_bphtb_infopembayaranbphtbtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cekbphtb_infopembayaranbphtb"
+            style="@style/MenuTitle"
+            android:layout_marginStart="@dimen/margin_icon_leftmargin"
+            app:layout_constraintStart_toEndOf="@+id/imageview_bphtb_infopembayaranbphtbicon"
+            app:layout_constraintTop_toTopOf="@+id/view_bphtb_infopembayaranbphtb"
+            app:layout_constraintBottom_toBottomOf="@+id/view_bphtb_infopembayaranbphtb"/>
 
     </android.support.constraint.ConstraintLayout>
 

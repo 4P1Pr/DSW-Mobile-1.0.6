@@ -21,17 +21,20 @@ import id.depok.depoksinglewindow.data.api.ApiSettings
 import id.depok.depoksinglewindow.databinding.ActivityHomeBinding
 import id.depok.depoksinglewindow.databinding.DialogEmergencycallBinding
 import id.depok.depoksinglewindow.ui.BaseActivity
+import id.depok.depoksinglewindow.ui.aspiration.ARG_IS_COMPLAINT
+import id.depok.depoksinglewindow.ui.aspiration.AspirationListActivity
 import id.depok.depoksinglewindow.ui.bphtb.BphtbActivity
-import id.depok.depoksinglewindow.ui.complaint.ARG_IS_COMPLAINT
-import id.depok.depoksinglewindow.ui.complaint.ComplaintListActivity
+import id.depok.depoksinglewindow.ui.callcenter.CallCenterMenuActivity
 import id.depok.depoksinglewindow.ui.layanankesehatan.HealthCareServiceActivity
 import id.depok.depoksinglewindow.ui.layananpendidikan.LayananPendidikanActivity
 import id.depok.depoksinglewindow.ui.layananperizinan.LayananPerizinanActivity
 import id.depok.depoksinglewindow.ui.login.LoginActivity
 import id.depok.depoksinglewindow.ui.pbb.PbbActivity
+import id.depok.depoksinglewindow.ui.pdamdanpln.PdamdanPlnActivity
 import id.depok.depoksinglewindow.ui.settings.SettingsActivity
 import id.depok.depoksinglewindow.ui.shared.Arguments
 import id.depok.depoksinglewindow.ui.shared.WebPageActivity
+import id.depok.depoksinglewindow.ui.sigap.loginsigap.SigapLoginActivity
 import id.depok.depoksinglewindow.ui.zakat.ZakatActivity
 import id.depok.depoksinglewindow.util.DateFormat.FULL_DAY_DATE_MONTH_YEAR
 import org.koin.android.ext.android.inject
@@ -40,7 +43,6 @@ import java.util.*
 import kotlin.collections.ArrayList
 
 
-private const val CONTACT_CENTER_NUMBER = "08111232222"
 private const val SLIDER_AUTO_CYCLE_DELAY: Long = 1000
 private const val SLIDER_AUTO_CYCLE_DURATION: Long = 5000
 class HomeActivity : BaseActivity<HomeContract.Presenter>(), HomeContract.View {
@@ -53,7 +55,9 @@ class HomeActivity : BaseActivity<HomeContract.Presenter>(), HomeContract.View {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_home)
-        val permissions = arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION)
+        val permissions = arrayOf(
+                android.Manifest.permission.ACCESS_FINE_LOCATION,
+                android.Manifest.permission.CAMERA)
         ActivityCompat.requestPermissions(this, permissions,0)
 
         //pagerAdapter = CostompagerAdapter(supportFragmentManager)
@@ -114,8 +118,11 @@ class HomeActivity : BaseActivity<HomeContract.Presenter>(), HomeContract.View {
                     R.string.all_menuInfoKemacetan))
             menus.add(AppMenu(AppMenuType.INFO_LOWONGAN_KERJA, R.drawable.icon_work,
                     R.string.all_menuLowonganKerja))
-            menus.add(AppMenu(AppMenuType.PLN, R.drawable.icon_bolt,
-                    R.string.all_menuPLN))
+            menus.add(AppMenu(AppMenuType.PLN_DAN_PDAM, R.drawable.lineblue_plnpdam,
+                    R.string.all_menuPLNdanPDAM))
+            /*menus.add(AppMenu(AppMenuType.PENGADUAN, R.drawable.icon_lineblue_pengaduan,
+                    R.string.all_menuPengaduan))*/
+
 
             textviewHomeSubuhvalue.text = "-"
             textviewHomeDzuhurvalue.text = "-"
@@ -195,13 +202,13 @@ class HomeActivity : BaseActivity<HomeContract.Presenter>(), HomeContract.View {
     }
 
     override fun showQuestionAndAspiration() {
-        val intent = Intent(this, ComplaintListActivity::class.java)
+        val intent = Intent(this, AspirationListActivity::class.java)
         intent.putExtra(ARG_IS_COMPLAINT, true)
         startActivity(intent)
     }
 
     override fun showContactCenter() {
-        showTelephone(CONTACT_CENTER_NUMBER)
+        startActivity(Intent(this, CallCenterMenuActivity::class.java))
     }
 
     override fun showBeritaDepok() {
@@ -244,11 +251,12 @@ class HomeActivity : BaseActivity<HomeContract.Presenter>(), HomeContract.View {
         startActivity(intent)
     }
 
-    override fun showPLN() {
-        val intent = Intent(this, WebPageActivity::class.java)
-        intent.putExtra(Arguments.ARG_TITLE, getString(R.string.all_menuPLN))
-        intent.putExtra(Arguments.ARG_URL, ApiSettings.URL_PLN)
-        startActivity(intent)
+    override fun showPLNdanPDAM() {
+        startActivity(Intent(this, PdamdanPlnActivity::class.java))
+    }
+
+    override fun showPengaduan() {
+        startActivity(Intent(this, SigapLoginActivity::class.java))
     }
 
     override fun showPengaturan() {
