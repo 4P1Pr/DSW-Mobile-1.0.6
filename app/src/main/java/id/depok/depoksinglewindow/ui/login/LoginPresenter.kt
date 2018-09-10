@@ -46,7 +46,7 @@ class LoginPresenter(private val userRepository: UserRepository,
                             .with(schedulerProvider)
                             .subscribe(
                                     { loginResponse -> handleLoginResponse(loginResponse) },
-                                    { handleLoginError()}
+                                    { error -> handleLoginError(error)}
 
                             )
                 } else {
@@ -90,15 +90,15 @@ class LoginPresenter(private val userRepository: UserRepository,
             // log successful login
             userRepository.saveUser(loginResponse.user)
             analyticsManager.logSuccessfulLogin()
-            view?.showToast(R.string.login_loginsuccess)
+            view?.showToast(loginResponse.message)
             view?.showMain()
         } else {
             view?.showAlert(R.string.login_loginfailed, loginResponse.message)
         }
     }
 
-    private fun handleLoginError() {
+    private fun handleLoginError(error: Throwable) {
         view?.hideLoading()
-        view?.showAlert(R.string.login_loginfailed)
+        view?.showAlert(R.string.login_loginfailed, error.message!!)
     }
 }

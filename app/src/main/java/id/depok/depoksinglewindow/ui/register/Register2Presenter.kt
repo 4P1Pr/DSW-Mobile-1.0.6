@@ -138,7 +138,7 @@ class Register2Presenter(private val authRepository: AuthRepository,
                                 .with(schedulerProvider)
                                 .subscribe(
                                         { registerResponse -> handleRegisterResponse(registerResponse)},
-                                        { handleRegisterError()}
+                                        { error -> handleRegisterError(error)}
                                 )
                     }
                 } else {
@@ -210,9 +210,9 @@ class Register2Presenter(private val authRepository: AuthRepository,
         }
     }
 
-    private fun handleRegisterError() {
+    private fun handleRegisterError(error: Throwable) {
         view?.hideLoading()
-        view?.showAlert(R.string.register_registerfailed)
+        view?.showAlert(R.string.register_registerfailed, error.message!!)
     }
 
     private fun handleLoginResponse(loginResponse: LoginResponse) {
