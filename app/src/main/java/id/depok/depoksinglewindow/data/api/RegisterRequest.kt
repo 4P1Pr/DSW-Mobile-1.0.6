@@ -31,6 +31,10 @@ data class RegisterRequest(
     @Expose
     val gender: Int,
 
+    @SerializedName("id_pekerjaan")
+    @Expose
+    val Idpekerjaan: Int,
+
     @SerializedName("address")
     @Expose
     val address: String,

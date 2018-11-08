@@ -31,4 +31,8 @@ class MockData {
     fun getDepokLocation(context: Context): LocationData{
         return LocationData(DEPOK_ID, context.getString(R.string.all_kelurahan))
     }
+
+    fun getPekerjaanList(context: Context, id: Int): WorkerData {
+        return WorkerData(id, context.getString(R.string.all_pekerjaan))
+    }
 }

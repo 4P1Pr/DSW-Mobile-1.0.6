@@ -7,10 +7,7 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import id.depok.depoksinglewindow.R
-import id.depok.depoksinglewindow.data.LocationData
-import id.depok.depoksinglewindow.data.MOCK_ID
-import id.depok.depoksinglewindow.data.MockData
-import id.depok.depoksinglewindow.data.RegisterForm
+import id.depok.depoksinglewindow.data.*
 import id.depok.depoksinglewindow.databinding.ActivityRegister2Binding
 import id.depok.depoksinglewindow.ui.BaseActivity
 import id.depok.depoksinglewindow.ui.home.HomeActivity
@@ -182,6 +179,7 @@ class Register2Activity : BaseActivity<Register2Contract.Presenter>(), Register2
                         "",
                         "",
                         0,
+                        MockData().getPekerjaanList(this@Register2Activity, WORKER_ID),
                         "",
                         "",
                         (spinnerRegisterIsdepokresidence.selectedItemPosition + 1) % 2,

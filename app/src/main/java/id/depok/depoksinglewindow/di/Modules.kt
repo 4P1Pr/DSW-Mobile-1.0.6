@@ -111,7 +111,7 @@ val appModule = applicationContext {
         }
 
         factory { RegisterActivity() }
-        factory { RegisterPresenter() as RegisterContract.Presenter }
+        factory { RegisterPresenter(get(), get()) as RegisterContract.Presenter }
 
         factory { Register2Activity() }
         factory { Register2Presenter(get(), get(), get(), get(), get(), get()) as Register2Contract.Presenter }
@@ -222,6 +222,7 @@ val appModule = applicationContext {
         provide { ComplaintQuestionQuestionRepository(get()) }
         provide { NetManager(get()) }
         provide { ComplaintQuestionCategoryRepository(get("categoryLocalDataSource"), get("categoryRemoteDataSource")) }
+        provide { WorkerDataRepository(get())}
         provide { LocationDataRepository(get()) }
         provide { ImageSliderRepository(get()) }
         provide { AnalyticsManager(createWebService(get(), BuildConfig.BASE_URL, ApiSettings.COMPLAINT_QUESTION_DATE_FORMAT), get("userLocalDataSource")) }
@@ -246,6 +247,7 @@ val repositoryModule = applicationContext {
         provide("categoryRemoteDataSource") { ComplaintQuestionCategoryRemoteDataSource(get()) } bind (ComplaintQuestionCategoryDataSource::class)
         provide("LogDataSource") { LogRemoteDataSource(get()) } bind (LogDataSource::class)
         provide { LocationDataRemoteDataSource(get()) } bind (LocationDataSource::class)
+        provide { WorkerDataRemoteDataSource(get()) } bind (WorkerDataSource::class)
         provide { ImageSliderRemoteDataSource(get()) } bind (ImageSliderDataSource::class)
         provide { LogRemoteDataSource(get()) } bind (LogDataSource::class)
     }

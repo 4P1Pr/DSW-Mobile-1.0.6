@@ -3,10 +3,11 @@ package id.depok.depoksinglewindow.ui.register
 import android.content.Intent
 import android.databinding.DataBindingUtil
 import android.os.Bundle
+import android.view.View
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
 import id.depok.depoksinglewindow.R
-import id.depok.depoksinglewindow.data.MOCK_ID
-import id.depok.depoksinglewindow.data.MockData
-import id.depok.depoksinglewindow.data.RegisterForm
+import id.depok.depoksinglewindow.data.*
 import id.depok.depoksinglewindow.databinding.ActivityRegisterBinding
 import id.depok.depoksinglewindow.ui.BaseActivity
 import org.koin.android.ext.android.inject
@@ -32,6 +33,10 @@ class RegisterActivity : BaseActivity<RegisterContract.Presenter>(), RegisterCon
         binding.edittextRegisterFullname.error = getString(stringId)
     }
 
+    override fun showErrorNickName(stringId: Int) {
+        binding.edittextRegisterNickname.error = getString(stringId)
+    }
+
     override fun showErrorEmail(stringId: Int) {
         binding.edittextRegisterEmail.error = getString(stringId)
     }
@@ -47,9 +52,27 @@ class RegisterActivity : BaseActivity<RegisterContract.Presenter>(), RegisterCon
     override fun clearError() {
         binding.apply {
             edittextRegisterFullname.error = null
+            edittextRegisterNickname.error = null
             edittextRegisterEmail.error = null
             edittextRegisterPassword.error = null
             edittextRegisterPhonenumber.error = null
+        }
+    }
+
+    override fun showSetPekerjaan(workerlist : MutableList<WorkerData>) {
+        binding.apply{
+            val placeholder = MockData().getPekerjaanList(this@RegisterActivity, WORKER_ID)
+           workerlist.add(0, placeholder)
+            spinnerRegisterPekerjaan.adapter = ArrayAdapter<WorkerData>(this@RegisterActivity,
+                    android.R.layout.simple_list_item_1, workerlist)
+            spinnerRegisterPekerjaan.onItemSelectedListener = object: AdapterView.OnItemSelectedListener {
+                override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
+                    presenter.onPekerjaanSelected(spinnerRegisterPekerjaan.selectedItem as WorkerData)
+                }
+                override fun onNothingSelected(parent: AdapterView<*>) {
+
+                }
+            }
         }
     }
 
@@ -65,11 +88,14 @@ class RegisterActivity : BaseActivity<RegisterContract.Presenter>(), RegisterCon
         binding.apply {
             toolbarRegister.setNavigationOnClickListener{ finish() }
 
+            spinnerRegisterPekerjaan.adapter = createInitialPekerjaanAdapter()
+
             buttonRegisterNextbutton.setOnClickListener {
                 presenter.onPressNext(RegisterForm(
                         edittextRegisterFullname.text.toString(),
                         edittextRegisterNickname.text.toString(),
                         spinnerRegisterGender.selectedItemPosition,
+                        spinnerRegisterPekerjaan.selectedItem as WorkerData,
                         edittextRegisterEmail.text.toString(),
                         edittextRegisterPhonenumber.text.toString(),
                         1,
@@ -89,6 +115,15 @@ class RegisterActivity : BaseActivity<RegisterContract.Presenter>(), RegisterCon
 
         presenter.view = this
         presenter.start()
+    }
+
+    private fun createInitialPekerjaanAdapter(): ArrayAdapter<WorkerData> {
+        val pekerjaanList = ArrayList<WorkerData>()
+        pekerjaanList.add(MockData().getPekerjaanList(this@RegisterActivity, WORKER_ID))
+        return ArrayAdapter(
+                this@RegisterActivity,
+                android.R.layout.simple_list_item_1,
+                pekerjaanList)
     }
 
 }

@@ -10,6 +10,7 @@
     <string name="all_fullname">Nama Lengkap</string>
         <string name="all_nickname">Nama Pendek</string>
     <string name="all_gender">Jenis Kelamin</string>
+        <string name="all_pekerjaan">Pekerjaan Anda</string>
     <string name="all_phonenumber">No Handphone</string>
     <string name="all_depokresidences">Penduduk Depok</string>
     <string name="all_notdepokresidences">Bukan Penduduk Depok</string>

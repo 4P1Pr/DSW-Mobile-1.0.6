@@ -89,6 +89,9 @@ interface ApiService {
     @GET(ApiSettings.PATH_GET_KELURAHAN_BY_KECAMATAN)
     fun getKelurahans(@Query("district_id") kecamatanId: Long): Single<LocationDataResponse>
 
+    @GET(ApiSettings.PATH_GET_PEKERJAAN)
+    fun getWorkers():Single<WorkerDataResponse>
+
     @GET(ApiSettings.PATH_GET_SLIDER)
     fun getImageSlider(): Single<ImageSliderResponse>
 

@@ -100,6 +100,19 @@
                     app:layout_constraintTop_toBottomOf="@+id/textinputlayout_register_nickname"
                     android:entries="@array/gender"/>
 
+                <Spinner
+                    android:id="@+id/spinner_register_pekerjaan"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    tools:text="TextView"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="@dimen/margin_page_horizontalmargin"
+                    android:layout_marginEnd="@dimen/margin_page_horizontalmargin"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/spinner_register_gender"
+                    />
+
                 <android.support.design.widget.TextInputLayout
                     android:id="@+id/textinputlayout_register_emailtextinput"
                     android:layout_width="match_parent"
@@ -109,7 +122,7 @@
                     android:layout_marginTop="20dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/spinner_register_gender"
+                    app:layout_constraintTop_toBottomOf="@+id/spinner_register_pekerjaan"
                     >
 
                     <android.support.design.widget.TextInputEditText

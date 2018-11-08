@@ -2,6 +2,7 @@ package id.depok.depoksinglewindow.data
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
+import java.sql.Date
 import java.util.*
 
 /**
@@ -42,6 +43,10 @@ data class User (
         @SerializedName("gender")
         @Expose
         val gender: Int,
+
+        @SerializedName("id_pekerjaan")
+        @Expose
+        val Idpekerjaan: Int,
 
         @SerializedName("religion")
         @Expose

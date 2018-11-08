@@ -14,12 +14,14 @@ object ApiSettings {
     const val PATH_LOGIN = PATH_API + "auth/login"
     const val PATH_REGISTER = PATH_API + "auth/register"
     const val PATH_CHANGE_PASSWORD = PATH_API + "auth/change_password"
+    const val PATH_GET_PEKERJAAN = PATH_API + "pekerjaan"
     const val PATH_COMPLAINT = PATH_API + "complaint"
     const val PATH_COMPLAINT_CATEGORIES = PATH_API + "complaint_category"
     const val PATH_QUESTION_CATEGORIES = PATH_API + "question_category"
     const val PATH_GET_COMPLAINT = PATH_API + "getcomplaint"
     const val PATH_GET_QUESTION = PATH_API + "aspiration"
     const val PATH_GET_PROVINCES = PATH_API + "provinsi"
+
     const val PATH_GET_KABUPATEN_BY_PROVINCE = PATH_API + "kabupaten"
     const val PATH_GET_KECAMATAN_BY_KABUPATEN = PATH_API + "kecamatan"
     const val PATH_GET_KELURAHAN_BY_KECAMATAN = PATH_API + "kelurahan"
@@ -41,7 +43,7 @@ object ApiSettings {
     const val URL_PERIZINAN_ONLINE = "https://perizinanonline.depok.go.id/index.php/ijinmasuk"
 
     //Kesehatan
-    const val URL_REGISTRASI_LAYANAN_KESEHATAN = "https://103.113.31.29/dsw_fix/html/antri"
+    const val URL_REGISTRASI_LAYANAN_KESEHATAN = "https://simpus.depok.go.id/pendaftaran/web/registrasi/dsw"
     const val URL_INFORMASI_LAYANAN_KESEHATAN = "https://103.113.31.29/dsw_fix/html/kesehatan"
     const val URL_OLD_PATIENT_QUEUE = "http://182.23.86.31/dsw/index.php/Home/antri"
     const val URL_DAFTAR_PASIEN_LAMA = "http://simpus.depok.go.id:8072/pendaftaran/web/registrasi/dsw/lama"

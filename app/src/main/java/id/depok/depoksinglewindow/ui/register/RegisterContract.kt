@@ -1,7 +1,7 @@
 package id.depok.depoksinglewindow.ui.register
 
-import id.depok.depoksinglewindow.data.LocationData
 import id.depok.depoksinglewindow.data.RegisterForm
+import id.depok.depoksinglewindow.data.WorkerData
 import id.depok.depoksinglewindow.ui.MvpContract
 
 /**
@@ -15,11 +15,15 @@ interface RegisterContract {
 
         fun showErrorFullName(stringId: Int)
 
+        fun showErrorNickName (stringId: Int)
+
         fun showErrorEmail(stringId: Int)
 
         fun showErrorPassword(stringId: Int)
 
         fun showErrorPhoneNumber(stringId: Int)
+
+        fun showSetPekerjaan(workerlist : MutableList<WorkerData>)
 
         fun clearError()
 
@@ -29,5 +33,7 @@ interface RegisterContract {
     interface Presenter: MvpContract.BasePresenter<View> {
 
         fun onPressNext(formData: RegisterForm)
+
+        fun onPekerjaanSelected (pekerjaan: WorkerData)
     }
 }
